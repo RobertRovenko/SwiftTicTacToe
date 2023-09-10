@@ -13,6 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        Thread.sleep(forTimeInterval: 2)
+        //This is to show my LaunchScreen for 2 seconds before it dissapears
+        
+        
         // Override point for customization after application launch.
         return true
     }
