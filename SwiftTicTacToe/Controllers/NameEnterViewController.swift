@@ -1,21 +1,27 @@
 //
-//  StartGameViewController.swift
+//  NameEnterViewController.swift
 //  SwiftTicTacToe
 //
-//  Created by Robert Falkbäck on 2023-09-10.
+//  Created by Robert Falkbäck on 2023-09-12.
 //
 
 import UIKit
 
-class StartGameViewController: UIViewController {
+class NameEnterViewController: UIViewController {
 
+    @IBOutlet weak var btnConfirmName: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btnConfirmName(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "GameSegue", sender: self)
+        
+    }
+    
     /*
     // MARK: - Navigation
 

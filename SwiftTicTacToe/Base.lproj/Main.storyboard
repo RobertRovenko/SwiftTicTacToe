@@ -27,7 +27,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="PLAY">
                                             <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
                                                 <font key="NSOriginalFont" size="34" name="ZapfDingbatsITC"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -50,13 +50,16 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="QUIT">
                                             <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="btnQuit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7UX-fQ-LOv"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleImage" translatesAutoresizingMaskIntoConstraints="NO" id="kZL-O8-EnS">
                                 <rect key="frame" x="0.0" y="113" width="393" height="293"/>
@@ -81,28 +84,195 @@
                     <navigationItem key="navigationItem" id="oWR-75-2Cz"/>
                     <connections>
                         <outlet property="BtnPlay" destination="2Nf-nf-o1b" id="dE7-ls-Io3"/>
-                        <segue destination="lmQ-br-TBr" kind="show" identifier="StartGameSegue" id="mnC-bl-H8K"/>
+                        <outlet property="btnQuit" destination="gWc-QD-ilg" id="lzW-Sw-RN0"/>
+                        <segue destination="lmQ-br-TBr" kind="show" identifier="PlayerSelectSegue" animates="NO" id="mnC-bl-H8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-228.24427480916029" y="80.985915492957744"/>
         </scene>
-        <!--Start Game View Controller-->
+        <!--Player Select View Controller-->
         <scene sceneID="yic-y7-JCy">
             <objects>
-                <viewController storyboardIdentifier="StartGameSegue" id="lmQ-br-TBr" customClass="StartGameViewController" customModule="SwiftTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lmQ-br-TBr" customClass="PlayerSelectViewController" customModule="SwiftTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hYu-2Y-qiC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-R3-a1x">
+                                <rect key="frame" x="91" y="262" width="211" height="328"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDZ-uk-VLa">
+                                        <rect key="frame" x="0.0" y="0.0" width="211" height="64"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="1 PLAYER">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn1Player:" destination="lmQ-br-TBr" eventType="touchUpInside" id="lJG-ce-svr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-js-VVe">
+                                        <rect key="frame" x="0.0" y="264" width="211" height="64"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="2 PLAYERS">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Human" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-UM-vpg">
+                                <rect key="frame" x="161.66666666666666" y="184" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Cp6-4A-CI5"/>
+                                    <constraint firstAttribute="height" constant="70" id="U7p-Ve-hoJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Human" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-RN-Uvc">
+                                <rect key="frame" x="233" y="600" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="QSD-RJ-bAu"/>
+                                    <constraint firstAttribute="width" constant="70" id="fUO-Yp-buR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Human" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-ER-wIn">
+                                <rect key="frame" x="90" y="600" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0l3-2F-Ntr"/>
+                                    <constraint firstAttribute="width" constant="70" id="4id-to-WtX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tNj-g1-B5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2q6-UM-vpg" firstAttribute="centerX" secondItem="hYu-2Y-qiC" secondAttribute="centerX" id="APS-jk-qGv"/>
+                            <constraint firstItem="Ma7-R3-a1x" firstAttribute="centerX" secondItem="hYu-2Y-qiC" secondAttribute="centerX" id="FAy-dq-pfN"/>
+                            <constraint firstItem="bfW-ER-wIn" firstAttribute="leading" secondItem="hYu-2Y-qiC" secondAttribute="leading" constant="90" id="KbG-JG-bs7"/>
+                            <constraint firstItem="Ma7-R3-a1x" firstAttribute="centerY" secondItem="hYu-2Y-qiC" secondAttribute="centerY" id="LvY-ZY-xCk"/>
+                            <constraint firstItem="bfW-ER-wIn" firstAttribute="top" secondItem="Ma7-R3-a1x" secondAttribute="bottom" constant="10" id="P9b-bb-H57"/>
+                            <constraint firstItem="tNj-g1-B5o" firstAttribute="trailing" secondItem="9uB-RN-Uvc" secondAttribute="trailing" constant="90" id="YBL-TR-I98"/>
+                            <constraint firstItem="Ma7-R3-a1x" firstAttribute="top" secondItem="2q6-UM-vpg" secondAttribute="bottom" constant="8" id="fsi-NO-tYh"/>
+                            <constraint firstItem="2q6-UM-vpg" firstAttribute="centerX" secondItem="hYu-2Y-qiC" secondAttribute="centerX" id="vEO-WA-sxJ"/>
+                            <constraint firstItem="9uB-RN-Uvc" firstAttribute="top" secondItem="Ma7-R3-a1x" secondAttribute="bottom" constant="10" id="zq6-bw-5B0"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="exy-cR-H10"/>
+                    <navigationItem key="navigationItem" id="b9B-Ok-C7Z"/>
+                    <connections>
+                        <outlet property="btn1Player" destination="tDZ-uk-VLa" id="xRV-Ye-mjF"/>
+                        <segue destination="oTc-Lz-fyx" kind="show" identifier="GameSegue" id="3KH-jM-gZo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9y0-IJ-ejb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="81"/>
+            <point key="canvasLocation" x="635.87786259541986" y="80.985915492957744"/>
+        </scene>
+        <!--Name Enter View Controller-->
+        <scene sceneID="vKF-Cz-VyD">
+            <objects>
+                <viewController id="oTc-Lz-fyx" customClass="NameEnterViewController" customModule="SwiftTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IqT-yN-u2y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-2R-P9d">
+                                <rect key="frame" x="35.333333333333343" y="203" width="322.66666666666663" height="53"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Enter your name">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L9A-0G-UG6">
+                                <rect key="frame" x="46.666666666666657" y="388.66666666666669" width="300" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2X2-QU-pFE"/>
+                                    <constraint firstAttribute="height" constant="75" id="hAk-y2-BCH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtk-9f-J1Z">
+                                <rect key="frame" x="126.66666666666669" y="563.66666666666663" width="140" height="51"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CONFRIM">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="btnConfirmName:" destination="Vu9-qc-tyb" eventType="touchUpInside" id="WM6-XV-Yn9"/>
+                                    <action selector="btnConfirmName:" destination="oTc-Lz-fyx" eventType="touchUpInside" id="eJi-LU-sz7"/>
+                                    <action selector="btnConfirmStartGame:" destination="Vu9-qc-tyb" eventType="touchUpInside" id="g1l-KV-bxo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MsE-q7-Upx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xtk-9f-J1Z" firstAttribute="top" secondItem="L9A-0G-UG6" secondAttribute="bottom" constant="100" id="Bjp-af-gta"/>
+                            <constraint firstItem="4Sg-2R-P9d" firstAttribute="top" secondItem="MsE-q7-Upx" secondAttribute="top" constant="100" id="L8O-nt-ndz"/>
+                            <constraint firstItem="4Sg-2R-P9d" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="TTN-H4-xgy"/>
+                            <constraint firstItem="Xtk-9f-J1Z" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="gui-d5-HCM"/>
+                            <constraint firstItem="L9A-0G-UG6" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="i5y-wp-xUs"/>
+                            <constraint firstItem="L9A-0G-UG6" firstAttribute="centerY" secondItem="IqT-yN-u2y" secondAttribute="centerY" id="k4u-Ww-5sG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="a1L-NT-UiG"/>
+                    <connections>
+                        <outlet property="btnConfirmName" destination="Xtk-9f-J1Z" id="ldl-IJ-w4J"/>
+                        <segue destination="sDA-gc-ewO" kind="show" identifier="GameSegue" id="H0l-SJ-NST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBh-L3-1LK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Vu9-qc-tyb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="81"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="oYX-Yv-ylU">
+            <objects>
+                <viewController id="sDA-gc-ewO" customClass="GameViewController" customModule="SwiftTicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ifv-A4-9cF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="F81-m6-lDm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sys-3C-FFG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChN-zX-ngr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2323" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4X-Xh-6wG">
@@ -122,6 +292,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Human" width="500" height="500"/>
         <image name="TitleImage" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
