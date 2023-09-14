@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     
     var player1Name: String?
     var player2Name: String?
+    var winnerName: String?
     
     
     override func viewDidLoad() {
@@ -62,57 +63,38 @@ class GameViewController: UIViewController {
 
     
     func handleWin(winner: TicTacToeGame.Player) {
-        var winnerSymbol: String
+        //var winnerSymbol: String
 
         if winner == .O {
-            winnerSymbol = player1Name ?? "X"
+            //winnerSymbol = player1Name ?? "X"
+            winnerName = player1Name
         } else {
-            winnerSymbol = player2Name ?? "O"
+            //winnerSymbol = player2Name ?? "O"
+            winnerName = player2Name
         }
 
-        //Display a message for win
-        let alertController = UIAlertController(
-            title: "Game Over",
-            message: "\(winnerSymbol) wins!",
-            preferredStyle: .alert
-        )
-
-        let resetAction = UIAlertAction(
-            title: "Play Again",
-            style: .default
-        ) { _ in
-            self.resetGame()
-        }
-
-        alertController.addAction(resetAction)
-        present(alertController, animated: true, completion: nil)
+    
+        self.resetGame()
+        performSegue(withIdentifier: "GameOver", sender: self)
+        
     }
 
 
         func handleDraw() {
-            //Display a message for draw
-            let alertController = UIAlertController(
-                title: "Game Over",
-                message: "It's a draw!",
-                preferredStyle: .alert
-            )
-
-            let resetAction = UIAlertAction(
-                title: "Play Again",
-                style: .default
-            ) { _ in
-                self.resetGame()
-            }
-
-            alertController.addAction(resetAction)
-            present(alertController, animated: true, completion: nil)
+          
+            //Setting the winnername to nil so it displays a draw
+            winnerName = nil
+           
+            self.resetGame()
+            
+            performSegue(withIdentifier: "GameOver", sender: nil)
         }
 
     func resetGame() {
-        //Clear the game board in instance
+        //Clear the game board in instance and the button titles
         ticTacToeGame = TicTacToeGame()
-
-        //Clear the button titles
+        lblUserTurn.text = player1Name
+ 
         for button in boardButtons {
             button.setTitle(nil, for: .normal)
             button.layer.borderColor = UIColor.clear.cgColor
@@ -120,5 +102,13 @@ class GameViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "GameOver" {
+               if let gameOverVC = segue.destination as? GameOverViewController {
+                   gameOverVC.winnerName = self.winnerName // Pass the winner's name
+               }
+           }
+       }
+  
 }
 

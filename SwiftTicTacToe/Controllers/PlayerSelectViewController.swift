@@ -8,9 +8,9 @@
 import UIKit
 
 class PlayerSelectViewController: UIViewController {
-
+    
     @IBOutlet weak var btn1Player: UIButton!
-  
+    
     @IBOutlet weak var btn2Player: UIButton!
     
     override func viewDidLoad() {
@@ -18,25 +18,25 @@ class PlayerSelectViewController: UIViewController {
         
         navigationController?.navigationBar.tintColor = UIColor.black
         if let customFont = UIFont(name: "MarkerFelt-Thin", size: 20.0) {
-               //adding a custom font to my back button
-               let backButton = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-               backButton.setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
-
-               //connecting my font with my button
-               navigationItem.backBarButtonItem = backButton
-           }
-       
+            //adding a custom font to my back button
+            let backButton = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+            backButton.setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
+            
+            //connecting my font with my button
+            navigationItem.backBarButtonItem = backButton
+        }
+        
     }
     
-
+    
     @IBAction func btn1Player(_ sender: Any) {
         print("1Player")
     }
     
     @IBAction func btn2Player(_ sender: Any) {
-        print("2Player")
+        
     }
-    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "1PlayerSegue" {
