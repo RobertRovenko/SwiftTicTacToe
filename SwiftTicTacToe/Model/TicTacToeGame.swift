@@ -19,23 +19,27 @@ class TicTacToeGame {
 
     init() {
         board = [nil, nil, nil, nil, nil, nil, nil, nil, nil]
-        currentPlayer = .X
+        currentPlayer = .O
     }
 
+    func getCurrentPlayer() -> Player {
+        return currentPlayer
+    }
+    
     func makeMove(at index: Int) -> Bool {
             if index < 0 || index >= board.count || board[index] != nil {
                 return false //No more moves
             }
 
-            board[index] = currentPlayer
+        board[index] = currentPlayer
             currentPlayer = (currentPlayer == .X) ? .O : .X
             return true
         }
     func checkForWin() -> Player? {
         let winPatterns: [[Int]] = [
-            [0, 1, 2], [3, 4, 5], [6, 7, 8], //row
-            [0, 3, 6], [1, 4, 7], [2, 5, 8], //column
-            [0, 4, 8], [2, 4, 6]             //diagonal
+            [0, 1, 2], [3, 4, 5], [6, 7, 8], //rows
+            [0, 3, 6], [1, 4, 7], [2, 5, 8], //columns
+            [0, 4, 8], [2, 4, 6]             //diagonals
         ]
 
         for pattern in winPatterns {
@@ -43,12 +47,12 @@ class TicTacToeGame {
             let b = pattern[1]
             let c = pattern[2]
 
-            if board[a] == board[b] && board[b] == board[c] && board[a] != nil {
-                return board[a]
+            if let playerA = board[a], let playerB = board[b], let playerC = board[c], playerA == playerB, playerB == playerC {
+                return playerA
             }
         }
 
-        return nil //No win
+        return nil //No win yet
     }
 
 

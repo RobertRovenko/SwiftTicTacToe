@@ -18,6 +18,9 @@ class NameEnterViewController: UIViewController {
     var shouldHidePlayer2 = false
     var shouldHidePlayer1 = false
     
+    var player1Name: String?
+    var player2Name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +52,8 @@ class NameEnterViewController: UIViewController {
                txtFieldPlayer1.layer.borderWidth = 1.0
                txtFieldPlayer1.layer.cornerRadius = 0.0
            } else {
-              
+               player1Name = txtFieldPlayer1.text
+               player2Name = "NPC"
                txtFieldPlayer1.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer1.layer.borderWidth = 0.0
                txtFieldPlayer1.layer.cornerRadius = 0.0
@@ -66,12 +70,16 @@ class NameEnterViewController: UIViewController {
         
         if txtFieldPlayer2.text?.isEmpty == true || txtFieldPlayer1.text?.isEmpty == true{
               
+            
+            
                 txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
                 txtFieldPlayer1.layer.borderWidth = 2.0
                txtFieldPlayer2.layer.borderColor = UIColor.red.cgColor
                txtFieldPlayer2.layer.borderWidth = 2.0
            } else {
               
+               player1Name = txtFieldPlayer1.text
+               player2Name = txtFieldPlayer2.text
                txtFieldPlayer2.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer2.layer.borderWidth = 1.0
                txtFieldPlayer1.layer.borderColor = UIColor.black.cgColor
@@ -81,6 +89,18 @@ class NameEnterViewController: UIViewController {
                performSegue(withIdentifier: "GameSegue", sender: self)
            }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GameSegue" {
+            if let gameViewController = segue.destination as? GameViewController {
+                gameViewController.player1Name = player1Name
+                gameViewController.player2Name = player2Name
+            }
+        }
+    }
+
+    
     /*
     // MARK: - Navigation
 

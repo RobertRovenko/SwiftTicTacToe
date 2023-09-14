@@ -220,7 +220,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-oN-Rhl">
-                                <rect key="frame" x="46.666666666666657" y="625.66666666666663" width="300" height="60"/>
+                                <rect key="frame" x="46.666666666666657" y="507.66666666666674" width="300" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Qty-cb-1XV"/>
                                     <constraint firstAttribute="width" constant="300" id="z1b-bZ-Vb5"/>
@@ -233,7 +233,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="CONFRIM">
+                                        <fragment content="CONFIRM">
                                             <attributes>
                                                 <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -250,11 +250,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYd-5p-tfK">
-                                <rect key="frame" x="142" y="705.66666666666663" width="109" height="42.333333333333371"/>
+                                <rect key="frame" x="142" y="587.66666666666663" width="109" height="42.333333333333371"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="CONFRIM">
+                                        <fragment content="CONFIRM">
                                             <attributes>
                                                 <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -269,7 +269,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-0c-0iI">
-                                <rect key="frame" x="102.33333333333333" y="544" width="188.33333333333343" height="31.666666666666629"/>
+                                <rect key="frame" x="102.33333333333333" y="427" width="188.33333333333337" height="30.666666666666686"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Enter your name">
                                         <attributes>
@@ -286,15 +286,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6tS-0c-0iI" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="Fuj-BU-fFF"/>
-                            <constraint firstItem="BYd-5p-tfK" firstAttribute="top" secondItem="fyY-oN-Rhl" secondAttribute="bottom" constant="20" id="KtE-8G-CML"/>
                             <constraint firstItem="4Sg-2R-P9d" firstAttribute="top" secondItem="MsE-q7-Upx" secondAttribute="top" constant="70" id="L8O-nt-ndz"/>
-                            <constraint firstItem="MsE-q7-Upx" firstAttribute="bottom" secondItem="BYd-5p-tfK" secondAttribute="bottom" constant="70" id="NCE-fe-nsH"/>
-                            <constraint firstItem="fyY-oN-Rhl" firstAttribute="top" secondItem="6tS-0c-0iI" secondAttribute="bottom" constant="50" id="QnQ-f3-Bit"/>
+                            <constraint firstItem="6tS-0c-0iI" firstAttribute="top" secondItem="Xtk-9f-J1Z" secondAttribute="bottom" constant="50" id="McH-pR-DMw"/>
                             <constraint firstItem="4Sg-2R-P9d" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="TTN-H4-xgy"/>
                             <constraint firstItem="BYd-5p-tfK" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="XsC-kQ-LVn"/>
+                            <constraint firstItem="fyY-oN-Rhl" firstAttribute="top" secondItem="6tS-0c-0iI" secondAttribute="bottom" constant="50" id="Z0B-6p-pvi"/>
                             <constraint firstItem="L9A-0G-UG6" firstAttribute="top" secondItem="4Sg-2R-P9d" secondAttribute="bottom" constant="50" id="eL0-37-NYK"/>
                             <constraint firstItem="Xtk-9f-J1Z" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="gui-d5-HCM"/>
                             <constraint firstItem="L9A-0G-UG6" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="i5y-wp-xUs"/>
+                            <constraint firstItem="BYd-5p-tfK" firstAttribute="top" secondItem="fyY-oN-Rhl" secondAttribute="bottom" constant="20" id="kr2-MM-kbt"/>
                             <constraint firstItem="fyY-oN-Rhl" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="ohT-3r-vi8"/>
                             <constraint firstItem="Xtk-9f-J1Z" firstAttribute="top" secondItem="L9A-0G-UG6" secondAttribute="bottom" constant="20" id="rOj-qv-M11"/>
                         </constraints>
@@ -337,7 +337,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="a1:" destination="sDA-gc-ewO" eventType="touchUpInside" id="xB8-uR-Smg"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="IcN-bb-JiO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lz-8R-ieW">
@@ -349,7 +349,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="a2:" destination="sDA-gc-ewO" eventType="touchUpInside" id="JM9-tC-Jw2"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="dYJ-Tp-Yrr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-Dc-dd9">
@@ -361,7 +361,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="a3:" destination="sDA-gc-ewO" eventType="touchUpInside" id="HWs-IT-tgd"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="Znw-Lx-XRO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -378,7 +378,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="b1:" destination="sDA-gc-ewO" eventType="touchUpInside" id="i8s-x9-cZN"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="q4a-Yn-XsF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-xK-iQu">
@@ -390,7 +390,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="b2:" destination="sDA-gc-ewO" eventType="touchUpInside" id="2CV-5J-YpK"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="o7Z-fV-7aU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5p-cO-4rd">
@@ -402,7 +402,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="b3:" destination="sDA-gc-ewO" eventType="touchUpInside" id="Vbd-SA-rPF"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="ICu-5s-xB7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -419,7 +419,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="c1:" destination="sDA-gc-ewO" eventType="touchUpInside" id="O4x-Tt-G0x"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="FQx-ne-8db"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z2-V0-8C6">
@@ -431,7 +431,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="c2:" destination="sDA-gc-ewO" eventType="touchUpInside" id="NQn-9a-sr7"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="Z7l-or-h6i"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtH-3E-8jP">
@@ -443,7 +443,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="c3:" destination="sDA-gc-ewO" eventType="touchUpInside" id="e5z-u3-s4c"/>
+                                                    <action selector="boardButtonsTap:" destination="sDA-gc-ewO" eventType="touchUpInside" id="nYr-pV-JNt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -455,22 +455,23 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6LV-Be-UrN">
-                                <rect key="frame" x="111.00000000000001" y="195.66666666666666" width="171.33333333333337" height="35"/>
+                                <rect key="frame" x="156" y="195.66666666666666" width="81.333333333333314" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7f-cy-6T0">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="19.666666666666668" height="35"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Player 1">
+                                            <fragment content="X">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <font key="NSFont" size="32" name="MarkerFelt-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5v-SW-ciq">
-                                        <rect key="frame" x="114.66666666666667" y="0.0" width="56.666666666666671" height="35"/>
+                                        <rect key="frame" x="24.666666666666657" y="0.0" width="56.666666666666657" height="35"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Turn">
                                                 <attributes>
@@ -560,20 +561,93 @@
                     </view>
                     <navigationItem key="navigationItem" id="sys-3C-FFG"/>
                     <connections>
-                        <outlet property="a1" destination="c2O-Jv-fqK" id="FXN-De-qsJ"/>
-                        <outlet property="a2" destination="2lz-8R-ieW" id="3Me-36-G7d"/>
-                        <outlet property="a3" destination="Xdg-Dc-dd9" id="kBE-YS-4Pl"/>
-                        <outlet property="b1" destination="L5i-7p-r7J" id="D6c-3z-W17"/>
-                        <outlet property="b2" destination="Gbx-xK-iQu" id="rXz-2S-272"/>
-                        <outlet property="b3" destination="C5p-cO-4rd" id="kPp-xP-q93"/>
-                        <outlet property="c1" destination="e3Z-wf-yIn" id="lvR-NH-e2d"/>
-                        <outlet property="c2" destination="3z2-V0-8C6" id="dtE-7q-ihr"/>
-                        <outlet property="c3" destination="MtH-3E-8jP" id="ikA-JB-qa9"/>
+                        <outlet property="lblPlayer2Name" destination="VVV-Ne-Q3Z" id="HJ8-wC-P2i"/>
+                        <outlet property="lblPlayerOneName" destination="5IY-K4-VPf" id="lgb-FG-DBX"/>
+                        <outlet property="lblUserTurn" destination="k7f-cy-6T0" id="a4y-jg-zKy"/>
+                        <outletCollection property="boardButtons" destination="c2O-Jv-fqK" collectionClass="NSMutableArray" id="lzU-G8-Mtd"/>
+                        <outletCollection property="boardButtons" destination="2lz-8R-ieW" collectionClass="NSMutableArray" id="e3S-gJ-NKP"/>
+                        <outletCollection property="boardButtons" destination="Xdg-Dc-dd9" collectionClass="NSMutableArray" id="e9o-7D-b2w"/>
+                        <outletCollection property="boardButtons" destination="L5i-7p-r7J" collectionClass="NSMutableArray" id="zNZ-XX-PBL"/>
+                        <outletCollection property="boardButtons" destination="Gbx-xK-iQu" collectionClass="NSMutableArray" id="kvE-cL-HVw"/>
+                        <outletCollection property="boardButtons" destination="C5p-cO-4rd" collectionClass="NSMutableArray" id="POY-yX-6rT"/>
+                        <outletCollection property="boardButtons" destination="e3Z-wf-yIn" collectionClass="NSMutableArray" id="KGq-xm-dPm"/>
+                        <outletCollection property="boardButtons" destination="3z2-V0-8C6" collectionClass="NSMutableArray" id="r3K-ig-L3W"/>
+                        <outletCollection property="boardButtons" destination="MtH-3E-8jP" collectionClass="NSMutableArray" id="skI-5l-zlx"/>
+                        <segue destination="zp7-3C-w6Q" kind="presentation" identifier="GameOver" id="su7-dp-DLI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChN-zX-ngr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2322.9007633587785" y="80.985915492957744"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GtB-Hu-jf3">
+            <objects>
+                <viewController id="zp7-3C-w6Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfl-uT-GXB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-hU-dNm">
+                                <rect key="frame" x="151" y="579" width="92" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Home">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.10969907758630015" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="MarkerFelt-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-az-Tda">
+                                <rect key="frame" x="110" y="224" width="94" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Player">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QS-cy-yxl">
+                                <rect key="frame" x="216" y="224" width="93" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="WINS!">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWH-hn-Kxk">
+                                <rect key="frame" x="122" y="487" width="149" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="REMATCH">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pk3-ZC-Q1l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgy-92-KHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3223.6641221374043" y="80.985915492957744"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4X-Xh-6wG">
