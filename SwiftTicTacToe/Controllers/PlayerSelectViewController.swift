@@ -30,10 +30,14 @@ class PlayerSelectViewController: UIViewController {
     
     
     @IBAction func btn1Player(_ sender: Any) {
-        print("1Player")
+        
+        SoundManager.shared.playSound(named: "menusound")
+       
     }
     
     @IBAction func btn2Player(_ sender: Any) {
+        
+        SoundManager.shared.playSound(named: "menusound")
         
     }
 
@@ -51,15 +55,5 @@ class PlayerSelectViewController: UIViewController {
         }
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

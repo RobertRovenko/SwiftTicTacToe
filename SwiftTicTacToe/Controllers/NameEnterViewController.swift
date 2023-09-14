@@ -24,7 +24,7 @@ class NameEnterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //if there is one or two players
+        //if there is one or two players ui change
         
         if shouldHidePlayer1 {
             btnConfirmName.isHidden = true
@@ -58,7 +58,7 @@ class NameEnterViewController: UIViewController {
                txtFieldPlayer1.layer.borderWidth = 0.0
                txtFieldPlayer1.layer.cornerRadius = 0.0
 
-              
+               SoundManager.shared.playSound(named: "menusound")
                performSegue(withIdentifier: "GameSegue", sender: self)
            }
         
@@ -85,7 +85,7 @@ class NameEnterViewController: UIViewController {
                txtFieldPlayer1.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer1.layer.borderWidth = 1.0
 
-              
+               SoundManager.shared.playSound(named: "menusound")
                performSegue(withIdentifier: "GameSegue", sender: self)
            }
     }
@@ -99,16 +99,5 @@ class NameEnterViewController: UIViewController {
             }
         }
     }
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

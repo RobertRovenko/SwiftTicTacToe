@@ -100,6 +100,7 @@
                     <connections>
                         <outlet property="BtnPlay" destination="2Nf-nf-o1b" id="dE7-ls-Io3"/>
                         <outlet property="btnQuit" destination="gWc-QD-ilg" id="lzW-Sw-RN0"/>
+                        <outlet property="titleImageView" destination="kZL-O8-EnS" id="Gz3-Jy-pBO"/>
                         <segue destination="lmQ-br-TBr" kind="show" identifier="PlayerSelectSegue" animates="NO" id="mnC-bl-H8K"/>
                     </connections>
                 </viewController>
@@ -576,7 +577,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="sys-3C-FFG"/>
                     <connections>
+                        <outlet property="lblPlayer2Counter" destination="UaW-pi-DES" id="Ffp-O6-4cP"/>
                         <outlet property="lblPlayer2Name" destination="VVV-Ne-Q3Z" id="HJ8-wC-P2i"/>
+                        <outlet property="lblPlayerOneCounter" destination="151-ny-0OM" id="8Go-9B-kbS"/>
                         <outlet property="lblPlayerOneName" destination="5IY-K4-VPf" id="lgb-FG-DBX"/>
                         <outlet property="lblUserTurn" destination="k7f-cy-6T0" id="a4y-jg-zKy"/>
                         <outletCollection property="boardButtons" destination="c2O-Jv-fqK" collectionClass="NSMutableArray" id="lzU-G8-Mtd"/>
@@ -604,12 +607,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="043-HO-YNs">
-                                <rect key="frame" x="149.66666666666666" y="180" width="93.666666666666657" height="39.333333333333343"/>
+                                <rect key="frame" x="104.66666666666667" y="180" width="183.66666666666663" height="39.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-az-Tda">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="39.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="39.333333333333336"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Player">
+                                            <fragment content="Winner text">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <font key="NSFont" size="36" name="MarkerFelt-Thin"/>

@@ -10,36 +10,46 @@ import UIKit
 class GameViewController: UIViewController {
 
     var ticTacToeGame = TicTacToeGame()
+   
 
     @IBOutlet weak var lblUserTurn: UILabel!
     
+    @IBOutlet weak var lblPlayer2Counter: UILabel!
+    @IBOutlet weak var lblPlayerOneCounter: UILabel!
     @IBOutlet weak var lblPlayerOneName: UILabel!
    
     @IBOutlet weak var lblPlayer2Name: UILabel!
     
+    //outlet collection
     @IBOutlet var boardButtons: [UIButton]!
     
     var player1Name: String?
     var player2Name: String?
     var winnerName: String?
+    var player1Counter = 0
+    var player2Counter = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         lblPlayerOneName.text = player1Name ?? "Player 1"
         lblPlayer2Name.text = player2Name ?? "Player 2"
         lblUserTurn.text = player1Name
-      
+        
+        lblPlayerOneCounter.text = "\(player1Counter)"
+        lblPlayer2Counter.text = "\(player2Counter)"
+       
     }
     
    
     @IBAction func boardButtonsTap(_ sender: UIButton) {
+        SoundManager.shared.playSound(named: "clickbutton")
         handleMove(button: sender)
     }
     
-   
     
     func handleMove(button: UIButton) {
         let index = button.tag
@@ -63,13 +73,14 @@ class GameViewController: UIViewController {
 
     
     func handleWin(winner: TicTacToeGame.Player) {
-        //var winnerSymbol: String
-
+      
         if winner == .O {
             //winnerSymbol = player1Name ?? "X"
+            player1Counter += 1
             winnerName = player1Name
         } else {
             //winnerSymbol = player2Name ?? "O"
+            player2Counter += 1
             winnerName = player2Name
         }
 
@@ -91,10 +102,11 @@ class GameViewController: UIViewController {
         }
 
     func resetGame() {
-        //Clear the game board in instance and the button titles
+        //Clear the game board in instance and clear button titles
         ticTacToeGame = TicTacToeGame()
         lblUserTurn.text = player1Name
- 
+        lblPlayerOneCounter.text = "\(player1Counter)"
+        lblPlayer2Counter.text = "\(player2Counter)"
         for button in boardButtons {
             button.setTitle(nil, for: .normal)
             button.layer.borderColor = UIColor.clear.cgColor
