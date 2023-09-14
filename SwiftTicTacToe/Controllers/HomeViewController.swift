@@ -19,6 +19,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        BackgroundMusic.shared.start()
+           
+         
         imageViewAnimator = ImageViewAnimator(imageView: titleImageView)
              imageViewAnimator?.startAnimating()
         
@@ -33,10 +36,25 @@ class HomeViewController: UIViewController {
        
     }
     
+    @objc func appWillEnterForeground() {
+          BackgroundMusic.shared.appWillEnterForeground()
+      }
+
+    //preventing memoryleaks
+      deinit {
+          NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
+      }
+    override func viewWillAppear(_ animated: Bool) {
+        
+            super.viewWillAppear(animated)
+            BackgroundMusic.shared.startBackgroundAudio()
+        
+        }
     
     @IBAction func BtnPlay(_ sender: UIButton) {
         
         SoundManager.shared.playSound(named: "menusound")
+        BackgroundMusic.shared.stopBackgroundAudio()
 
         performSegue(withIdentifier: "PlayerSelectSegue", sender: self)
         
@@ -52,6 +70,7 @@ class HomeViewController: UIViewController {
            //QuitButton
            let quitAction = UIAlertAction(title: "Quit", style: .destructive) { _ in
                //quit the app
+               BackgroundMusic.shared.stopBackgroundAudio()
                UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
            }
            alert.addAction(quitAction)

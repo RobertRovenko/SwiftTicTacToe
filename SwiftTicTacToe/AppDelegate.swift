@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        BackgroundAudioManager.shared.startBackgroundAudio()
         
         Thread.sleep(forTimeInterval: 2)
         //This is to show my LaunchScreen for 2 seconds before it dissapears

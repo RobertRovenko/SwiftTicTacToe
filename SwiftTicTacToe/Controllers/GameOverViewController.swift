@@ -19,7 +19,13 @@ class GameOverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Mute background audio
+        
+
+        // Play "winsound"
         SoundManager.shared.playSound(named: "winsound")
+
+        
         
         //display the winnername
         if let winnerName = winnerName {
@@ -32,6 +38,7 @@ class GameOverViewController: UIViewController {
     
     @IBAction func btnRematch(_ sender: Any) {
         SoundManager.shared.playSound(named: "menusound")
+        
         self.dismiss(animated: true, completion: nil)
     }
     
