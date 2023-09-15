@@ -14,6 +14,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var btnQuit: UIButton!
     
+    
+    @IBOutlet var lblArrow: [UILabel]!
+    
+    var labelAnimator: ArrowAnimation?
     var imageViewAnimator: ImageViewAnimator?
     
     override func viewDidLoad() {
@@ -21,6 +25,8 @@ class HomeViewController: UIViewController {
         
         BackgroundMusic.shared.start()
            
+        labelAnimator = ArrowAnimation(labels: lblArrow)
+        labelAnimator?.startAnimating()
          
         imageViewAnimator = ImageViewAnimator(imageView: titleImageView)
              imageViewAnimator?.startAnimating()
@@ -36,15 +42,23 @@ class HomeViewController: UIViewController {
        
     }
     
-    @objc func appWillEnterForeground() {
-          BackgroundMusic.shared.appWillEnterForeground()
-      }
+   
+
+    override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
+
+           labelAnimator?.stopAnimating()
+       }
+    
+    
 
     //preventing memoryleaks
       deinit {
           NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
       }
     override func viewWillAppear(_ animated: Bool) {
+        
+        labelAnimator?.startAnimating()
         
             super.viewWillAppear(animated)
             BackgroundMusic.shared.startBackgroundAudio()

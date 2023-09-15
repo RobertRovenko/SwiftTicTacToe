@@ -13,8 +13,15 @@ class PlayerSelectViewController: UIViewController {
     
     @IBOutlet weak var btn2Player: UIButton!
     
+    @IBOutlet var playerSelectSymbol: [UILabel]!
+    
+    var labelAnimator: ArrowAnimation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        labelAnimator = ArrowAnimation(labels: playerSelectSymbol)
+        labelAnimator?.startAnimating()
         
         navigationController?.navigationBar.tintColor = UIColor.black
         if let customFont = UIFont(name: "MarkerFelt-Thin", size: 20.0) {
@@ -40,7 +47,18 @@ class PlayerSelectViewController: UIViewController {
         SoundManager.shared.playSound(named: "menusound")
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
 
+            labelAnimator?.startAnimating()
+        }
+
+    override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
+
+           labelAnimator?.stopAnimating()
+       }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "1PlayerSegue" {

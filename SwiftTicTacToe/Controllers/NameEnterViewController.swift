@@ -21,9 +21,14 @@ class NameEnterViewController: UIViewController {
     var player1Name: String?
     var player2Name: String?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+       
+        
         //if there is one or two players ui change
         
         if shouldHidePlayer1 {
@@ -37,10 +42,7 @@ class NameEnterViewController: UIViewController {
            }
        
     }
-    
-    
-   
-    
+
     @IBAction func btnConfirmName(_ sender: UIButton) {
         
         if txtFieldPlayer1.text?.isEmpty ?? true {

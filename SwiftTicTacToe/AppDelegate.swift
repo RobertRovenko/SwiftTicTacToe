@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Thread.sleep(forTimeInterval: 2)
         //This is to show my LaunchScreen for 2 seconds before it dissapears
         
+      
         
         // Override point for customization after application launch.
         return true

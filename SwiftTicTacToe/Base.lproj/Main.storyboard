@@ -16,66 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-nf-o1b">
-                                <rect key="frame" x="96.666666666666686" y="538" width="200" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="2GD-zh-78m"/>
-                                    <constraint firstAttribute="height" constant="65" id="TIp-dp-a3P"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="&gt;">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="47" name="MarkerFelt-Thin"/>
-                                                <font key="NSOriginalFont" size="34" name="ZapfDingbatsITC"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content=" ">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="47" name="MarkerFelt-Thin"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="PLAY">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="47" name="MarkerFelt-Thin"/>
-                                                <font key="NSOriginalFont" size="34" name="ZapfDingbatsITC"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="BtnPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYU-31-QN3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWc-QD-ilg">
-                                <rect key="frame" x="96.666666666666686" y="653" width="200" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="b20-oz-Xoj"/>
-                                    <constraint firstAttribute="height" constant="65" id="xOk-ZQ-3Bl"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="&gt; QUIT">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="40" name="MarkerFelt-Thin"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="btnQuit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7UX-fQ-LOv"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleImage" translatesAutoresizingMaskIntoConstraints="NO" id="kZL-O8-EnS">
                                 <rect key="frame" x="0.0" y="113" width="393" height="293"/>
                                 <constraints>
@@ -83,17 +23,95 @@
                                     <constraint firstAttribute="width" constant="393" id="ouP-XE-L2e"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zz-gw-kNq">
+                                <rect key="frame" x="87.333333333333329" y="540" width="218.33333333333337" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-PN-8Jo">
+                                        <rect key="frame" x="0.0" y="0.0" width="18.333333333333332" height="63"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="&gt;">
+                                                <attributes>
+                                                    <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-nf-o1b">
+                                        <rect key="frame" x="18.333333333333343" y="0.0" width="200" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="ChV-l4-Pzx"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="PLAY">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="47" name="MarkerFelt-Thin"/>
+                                                        <font key="NSOriginalFont" size="34" name="ZapfDingbatsITC"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="BtnPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYU-31-QN3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYD-Y1-e71">
+                                <rect key="frame" x="87.333333333333329" y="653" width="218.33333333333337" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F54-t2-fqz">
+                                        <rect key="frame" x="0.0" y="0.0" width="18.333333333333332" height="65"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="&gt;">
+                                                <attributes>
+                                                    <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWc-QD-ilg">
+                                        <rect key="frame" x="18.333333333333343" y="0.0" width="200" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="b20-oz-Xoj"/>
+                                            <constraint firstAttribute="height" constant="65" id="xOk-ZQ-3Bl"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="QUIT">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="40" name="MarkerFelt-Thin"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnQuit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7UX-fQ-LOv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kZL-O8-EnS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="4bk-5Y-QNK"/>
+                            <constraint firstItem="5Zz-gw-kNq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hkq-iR-mav"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YYD-Y1-e71" secondAttribute="bottom" constant="100" id="K6B-0X-Ccs"/>
                             <constraint firstItem="kZL-O8-EnS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PVt-61-4JN"/>
-                            <constraint firstItem="2Nf-nf-o1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WkV-SC-fwT"/>
                             <constraint firstItem="kZL-O8-EnS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z7Q-FJ-Czw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gWc-QD-ilg" secondAttribute="bottom" constant="100" id="hR8-Ri-Vqa"/>
-                            <constraint firstItem="gWc-QD-ilg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v8j-Vs-CQB"/>
-                            <constraint firstItem="gWc-QD-ilg" firstAttribute="top" secondItem="2Nf-nf-o1b" secondAttribute="bottom" constant="50" id="zMp-2K-XMY"/>
+                            <constraint firstItem="YYD-Y1-e71" firstAttribute="top" secondItem="5Zz-gw-kNq" secondAttribute="bottom" constant="50" id="gyG-AS-dMa"/>
+                            <constraint firstItem="YYD-Y1-e71" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qNh-Jt-XJ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oWR-75-2Cz"/>
@@ -101,12 +119,14 @@
                         <outlet property="BtnPlay" destination="2Nf-nf-o1b" id="dE7-ls-Io3"/>
                         <outlet property="btnQuit" destination="gWc-QD-ilg" id="lzW-Sw-RN0"/>
                         <outlet property="titleImageView" destination="kZL-O8-EnS" id="Gz3-Jy-pBO"/>
+                        <outletCollection property="lblArrow" destination="7dS-PN-8Jo" collectionClass="NSMutableArray" id="1nU-3I-ACu"/>
+                        <outletCollection property="lblArrow" destination="F54-t2-fqz" collectionClass="NSMutableArray" id="FWd-Gz-cpg"/>
                         <segue destination="lmQ-br-TBr" kind="show" identifier="PlayerSelectSegue" animates="NO" id="mnC-bl-H8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-228.24427480916029" y="80.985915492957744"/>
+            <point key="canvasLocation" x="-317" y="1"/>
         </scene>
         <!--Player Select View Controller-->
         <scene sceneID="yic-y7-JCy">
@@ -117,46 +137,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="Ma7-R3-a1x">
-                                <rect key="frame" x="76" y="262" width="241" height="328"/>
+                                <rect key="frame" x="70.000000000000014" y="262" width="253.33333333333337" height="328"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDZ-uk-VLa">
-                                        <rect key="frame" x="0.0" y="0.0" width="241" height="64"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="&gt; 1 PLAYER">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="btn1Player:" destination="lmQ-br-TBr" eventType="touchUpInside" id="hj8-Se-EXe"/>
-                                            <segue destination="oTc-Lz-fyx" kind="show" identifier="1PlayerSegue" id="VUV-Mg-Yzs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-js-VVe">
-                                        <rect key="frame" x="0.0" y="264" width="241" height="64"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="&gt; 2 PLAYERS">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="btn2Player:" destination="lmQ-br-TBr" eventType="touchUpInside" id="o1F-VN-p49"/>
-                                            <segue destination="oTc-Lz-fyx" kind="show" identifier="2PlayerSegue" id="NZt-YO-Y93"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEV-AZ-MVW">
+                                        <rect key="frame" x="0.0" y="0.0" width="253.33333333333334" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df9-Hp-x1t">
+                                                <rect key="frame" x="0.0" y="0.0" width="18.333333333333332" height="64"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="&gt;">
+                                                        <attributes>
+                                                            <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDZ-uk-VLa">
+                                                <rect key="frame" x="18.333333333333314" y="0.0" width="235" height="64"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="1 PLAYER">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btn1Player:" destination="lmQ-br-TBr" eventType="touchUpInside" id="hj8-Se-EXe"/>
+                                                    <segue destination="oTc-Lz-fyx" kind="show" identifier="1PlayerSegue" id="VUV-Mg-Yzs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1Z-xc-TVW">
+                                        <rect key="frame" x="0.0" y="264" width="253.33333333333334" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCk-ve-wbt">
+                                                <rect key="frame" x="0.0" y="0.0" width="18.333333333333332" height="64"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="&gt;">
+                                                        <attributes>
+                                                            <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-js-VVe">
+                                                <rect key="frame" x="18.333333333333314" y="0.0" width="235" height="64"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="  2 PLAYERS">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="48" name="MarkerFelt-Thin"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btn2Player:" destination="lmQ-br-TBr" eventType="touchUpInside" id="o1F-VN-p49"/>
+                                                    <segue destination="oTc-Lz-fyx" kind="show" identifier="2PlayerSegue" id="NZt-YO-Y93"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Human" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-UM-vpg">
@@ -199,11 +253,13 @@
                     <connections>
                         <outlet property="btn1Player" destination="tDZ-uk-VLa" id="d5U-sv-hR9"/>
                         <outlet property="btn2Player" destination="qE8-js-VVe" id="1ur-vc-mzg"/>
+                        <outletCollection property="playerSelectSymbol" destination="df9-Hp-x1t" collectionClass="NSMutableArray" id="aHa-Gh-WFU"/>
+                        <outletCollection property="playerSelectSymbol" destination="XCk-ve-wbt" collectionClass="NSMutableArray" id="qpu-Yc-u72"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9y0-IJ-ejb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635.87786259541986" y="80.985915492957744"/>
+            <point key="canvasLocation" x="549" y="1"/>
         </scene>
         <!--Name Enter View Controller-->
         <scene sceneID="vKF-Cz-VyD">
@@ -214,7 +270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-2R-P9d">
-                                <rect key="frame" x="102.33333333333333" y="173" width="188.33333333333337" height="31.666666666666657"/>
+                                <rect key="frame" x="102.33333333333333" y="173" width="188.33333333333337" height="30.666666666666657"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Enter your name">
                                         <attributes>
@@ -227,7 +283,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L9A-0G-UG6">
-                                <rect key="frame" x="46.666666666666657" y="254.66666666666663" width="300" height="60"/>
+                                <rect key="frame" x="46.666666666666657" y="253.66666666666663" width="300" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="2X2-QU-pFE"/>
                                     <constraint firstAttribute="height" constant="60" id="hAk-y2-BCH"/>
@@ -235,21 +291,12 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-oN-Rhl">
-                                <rect key="frame" x="46.666666666666657" y="507.66666666666674" width="300" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Qty-cb-1XV"/>
-                                    <constraint firstAttribute="width" constant="300" id="z1b-bZ-Vb5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtk-9f-J1Z">
-                                <rect key="frame" x="133" y="334.66666666666669" width="127" height="42.333333333333314"/>
+                                <rect key="frame" x="142" y="333.66666666666669" width="109" height="42.333333333333314"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="&gt; CONFIRM">
+                                        <fragment content="CONFIRM">
                                             <attributes>
                                                 <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -265,12 +312,34 @@
                                     <action selector="btnConfirmStartGame:" destination="Vu9-qc-tyb" eventType="touchUpInside" id="g1l-KV-bxo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-0c-0iI">
+                                <rect key="frame" x="102.33333333333333" y="426" width="188.33333333333337" height="30.666666666666686"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Enter your name">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="MarkerFelt-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-oN-Rhl">
+                                <rect key="frame" x="46.666666666666657" y="506.66666666666674" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MQl-ar-XB4"/>
+                                    <constraint firstAttribute="width" constant="300" id="z1b-bZ-Vb5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYd-5p-tfK">
-                                <rect key="frame" x="133" y="587.66666666666663" width="127" height="42.333333333333371"/>
+                                <rect key="frame" x="142" y="586.66666666666663" width="109" height="42.333333333333371"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="&gt; CONFIRM">
+                                        <fragment content="CONFIRM">
                                             <attributes>
                                                 <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -284,35 +353,22 @@
                                     <action selector="btn2ConfirmName:" destination="oTc-Lz-fyx" eventType="touchUpInside" id="ElW-Zi-cdb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-0c-0iI">
-                                <rect key="frame" x="102.33333333333333" y="427" width="188.33333333333337" height="30.666666666666686"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Enter your name">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="28" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MsE-q7-Upx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BYd-5p-tfK" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="2Jh-f5-L2t"/>
+                            <constraint firstItem="Xtk-9f-J1Z" firstAttribute="top" secondItem="L9A-0G-UG6" secondAttribute="bottom" constant="20" id="A2i-YC-8Pd"/>
+                            <constraint firstItem="6tS-0c-0iI" firstAttribute="top" secondItem="Xtk-9f-J1Z" secondAttribute="bottom" constant="50" id="FoI-kt-i3T"/>
                             <constraint firstItem="6tS-0c-0iI" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="Fuj-BU-fFF"/>
+                            <constraint firstItem="BYd-5p-tfK" firstAttribute="top" secondItem="fyY-oN-Rhl" secondAttribute="bottom" constant="20" id="KlS-1q-ITw"/>
                             <constraint firstItem="4Sg-2R-P9d" firstAttribute="top" secondItem="MsE-q7-Upx" secondAttribute="top" constant="70" id="L8O-nt-ndz"/>
-                            <constraint firstItem="6tS-0c-0iI" firstAttribute="top" secondItem="Xtk-9f-J1Z" secondAttribute="bottom" constant="50" id="McH-pR-DMw"/>
                             <constraint firstItem="4Sg-2R-P9d" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="TTN-H4-xgy"/>
-                            <constraint firstItem="BYd-5p-tfK" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="XsC-kQ-LVn"/>
                             <constraint firstItem="fyY-oN-Rhl" firstAttribute="top" secondItem="6tS-0c-0iI" secondAttribute="bottom" constant="50" id="Z0B-6p-pvi"/>
                             <constraint firstItem="L9A-0G-UG6" firstAttribute="top" secondItem="4Sg-2R-P9d" secondAttribute="bottom" constant="50" id="eL0-37-NYK"/>
-                            <constraint firstItem="Xtk-9f-J1Z" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="gui-d5-HCM"/>
+                            <constraint firstItem="Xtk-9f-J1Z" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="hT2-sq-6zA"/>
                             <constraint firstItem="L9A-0G-UG6" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="i5y-wp-xUs"/>
-                            <constraint firstItem="BYd-5p-tfK" firstAttribute="top" secondItem="fyY-oN-Rhl" secondAttribute="bottom" constant="20" id="kr2-MM-kbt"/>
                             <constraint firstItem="fyY-oN-Rhl" firstAttribute="centerX" secondItem="IqT-yN-u2y" secondAttribute="centerX" id="ohT-3r-vi8"/>
-                            <constraint firstItem="Xtk-9f-J1Z" firstAttribute="top" secondItem="L9A-0G-UG6" secondAttribute="bottom" constant="20" id="rOj-qv-M11"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a1L-NT-UiG"/>
@@ -328,7 +384,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBh-L3-1LK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Vu9-qc-tyb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="81"/>
+            <point key="canvasLocation" x="1489" y="407"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="oYX-Yv-ylU">
@@ -507,18 +563,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dsG-Ky-lXI">
                                         <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="52.666666666666664"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IY-K4-VPf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IY-K4-VPf">
                                                 <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="26.333333333333332"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Player 1">
                                                         <attributes>
                                                             <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="151-ny-0OM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="151-ny-0OM">
                                                 <rect key="frame" x="0.0" y="26.333333333333343" width="82.333333333333329" height="26.333333333333329"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0">
@@ -541,6 +598,7 @@
                                                     <fragment content="Player 2">
                                                         <attributes>
                                                             <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -596,7 +654,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChN-zX-ngr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2322.9007633587785" y="80.985915492957744"/>
+            <point key="canvasLocation" x="550" y="975"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="GtB-Hu-jf3">
@@ -606,71 +664,168 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="043-HO-YNs">
-                                <rect key="frame" x="104.66666666666667" y="180" width="183.66666666666663" height="39.333333333333343"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ng7-Aq-SXF">
+                                <rect key="frame" x="119" y="541" width="155" height="201"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-az-Tda">
-                                        <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="39.333333333333336"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Winner text">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rJe-h1-Zwk">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="51"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWH-hn-Kxk">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="51"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="REMATCH">
+                                                            <attributes>
+                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnRematch:" destination="zp7-3C-w6Q" eventType="touchUpInside" id="V72-hj-3Ca"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lb-Pd-MoX">
+                                        <rect key="frame" x="0.0" y="151" width="155" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-hU-dNm">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Main Menu">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="32" name="MarkerFelt-Thin"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnMainMenu:" destination="zp7-3C-w6Q" eventType="touchUpInside" id="uKO-VV-PWk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GkX-lQ-jNC"/>
+                                            <constraint firstAttribute="width" constant="155" id="n41-Kt-umV"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ng7-Aq-SXF">
-                                <rect key="frame" x="113.66666666666669" y="443" width="166" height="199"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-az-Tda">
+                                <rect key="frame" x="104.66666666666667" y="100" width="183.66666666666663" height="39.333333333333343"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Winner text">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="36" name="MarkerFelt-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="xYo-My-j7l">
+                                <rect key="frame" x="64.333333333333343" y="239.33333333333334" width="264.66666666666663" height="82.666666666666657"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWH-hn-Kxk">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="52"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="&gt; REMATCH">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnRematch:" destination="zp7-3C-w6Q" eventType="touchUpInside" id="V72-hj-3Ca"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-hU-dNm">
-                                        <rect key="frame" x="0.0" y="152" width="166" height="47"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="&gt; Home">
-                                            <color key="titleColor" red="1" green="0.1096990776" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="azA-Ds-878">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="82.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qab-yH-PEs">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="26.333333333333332"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Player 1">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lm-Zy-Rew">
+                                                <rect key="frame" x="0.0" y="56.33333333333335" width="82.333333333333329" height="26.333333333333336"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="0">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="irM-my-ZM4">
+                                        <rect key="frame" x="182.33333333333331" y="0.0" width="82.333333333333314" height="82.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oW1-QI-BwC">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="26.333333333333332"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Player 2">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIQ-3L-cqH">
+                                                <rect key="frame" x="0.0" y="56.33333333333335" width="82.333333333333329" height="26.333333333333336"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="0">
+                                                        <attributes>
+                                                            <font key="NSFont" size="24" name="MarkerFelt-Thin"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pk3-ZC-Q1l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="043-HO-YNs" firstAttribute="top" secondItem="pk3-ZC-Q1l" secondAttribute="top" constant="180" id="6jg-Sk-Lkx"/>
+                            <constraint firstItem="xYo-My-j7l" firstAttribute="centerX" secondItem="xfl-uT-GXB" secondAttribute="centerX" id="7mT-fR-0Yi"/>
+                            <constraint firstItem="Hih-az-Tda" firstAttribute="top" secondItem="pk3-ZC-Q1l" secondAttribute="top" constant="100" id="Ghh-6f-MIZ"/>
+                            <constraint firstItem="Hih-az-Tda" firstAttribute="centerX" secondItem="xfl-uT-GXB" secondAttribute="centerX" id="b46-wC-xmM"/>
                             <constraint firstItem="ng7-Aq-SXF" firstAttribute="centerX" secondItem="xfl-uT-GXB" secondAttribute="centerX" id="egE-jZ-hUZ"/>
-                            <constraint firstItem="pk3-ZC-Q1l" firstAttribute="bottom" secondItem="ng7-Aq-SXF" secondAttribute="bottom" constant="200" id="ugJ-gk-YOy"/>
-                            <constraint firstItem="043-HO-YNs" firstAttribute="centerX" secondItem="xfl-uT-GXB" secondAttribute="centerX" id="x5w-Ae-PjI"/>
+                            <constraint firstItem="xYo-My-j7l" firstAttribute="top" secondItem="Hih-az-Tda" secondAttribute="bottom" constant="100" id="jGG-O0-JdT"/>
+                            <constraint firstItem="pk3-ZC-Q1l" firstAttribute="bottom" secondItem="ng7-Aq-SXF" secondAttribute="bottom" constant="100" id="ugJ-gk-YOy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lvY-cq-TnX"/>
                     <connections>
+                        <outlet property="btnMainMenu" destination="u6M-hU-dNm" id="wEm-kO-gbv"/>
                         <outlet property="btnRematch" destination="YWH-hn-Kxk" id="omN-vu-4H3"/>
+                        <outlet property="lblPlayer2Score" destination="WIQ-3L-cqH" id="844-pb-ksV"/>
+                        <outlet property="lblPlayerOneName" destination="qab-yH-PEs" id="Twf-S4-i0X"/>
+                        <outlet property="lblPlayerOneScore" destination="3lm-Zy-Rew" id="TfL-25-4dF"/>
+                        <outlet property="lblPlayerTwoName" destination="oW1-QI-BwC" id="YYw-nq-7Q2"/>
                         <outlet property="lblWinnerName" destination="Hih-az-Tda" id="2ZQ-uf-CrK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgy-92-KHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3161" y="81"/>
+            <point key="canvasLocation" x="-318" y="975"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4X-Xh-6wG">
             <objects>
                 <navigationController id="fC1-rj-A4V" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cQu-wD-mlh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="USf-Qy-fEC">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -681,7 +836,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IyG-yj-og4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1086" y="81"/>
+            <point key="canvasLocation" x="-1298" y="406"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -25,6 +25,7 @@
 		DA596B6B2AB3B334006D485C /* menusound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA596B6A2AB3B334006D485C /* menusound.mp3 */; };
 		DA596B6D2AB3B375006D485C /* winsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA596B6C2AB3B375006D485C /* winsound.mp3 */; };
 		DA596B6F2AB3B857006D485C /* backgroundmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA596B6E2AB3B857006D485C /* backgroundmusic.mp3 */; };
+		DA596B722AB3C364006D485C /* ArrowAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596B712AB3C364006D485C /* ArrowAnimation.swift */; };
 		DA886C6D2AB1AD020012CEE5 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA886C6C2AB1AD020012CEE5 /* TicTacToeGame.swift */; };
 		DAA0BCFB2AB2F02600E700EF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0BCFA2AB2F02600E700EF /* GameOverViewController.swift */; };
 		DAB862902AB07EED0057BC90 /* NameEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8628F2AB07EED0057BC90 /* NameEnterViewController.swift */; };
@@ -70,6 +71,7 @@
 		DA596B6A2AB3B334006D485C /* menusound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menusound.mp3; path = ../../../.Trash/menusound.mp3; sourceTree = "<group>"; };
 		DA596B6C2AB3B375006D485C /* winsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = winsound.mp3; path = ../../../.Trash/winsound.mp3; sourceTree = "<group>"; };
 		DA596B6E2AB3B857006D485C /* backgroundmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundmusic.mp3; path = ../../../.Trash/backgroundmusic.mp3; sourceTree = "<group>"; };
+		DA596B712AB3C364006D485C /* ArrowAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowAnimation.swift; sourceTree = "<group>"; };
 		DA886C6C2AB1AD020012CEE5 /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 		DAA0BCFA2AB2F02600E700EF /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		DAB8628F2AB07EED0057BC90 /* NameEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				DA4AB0692AB353D30025508F /* SoundManager.swift */,
 				DA4AB0772AB35B350025508F /* BackgroundMusic.swift */,
 				DA4AB0792AB3614C0025508F /* ImageViewAnimator.swift */,
+				DA596B712AB3C364006D485C /* ArrowAnimation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				DA0D2CB52AAE23E8005F1DD6 /* HomeViewController.swift in Sources */,
 				DA886C6D2AB1AD020012CEE5 /* TicTacToeGame.swift in Sources */,
 				DA4AB06A2AB353D30025508F /* SoundManager.swift in Sources */,
+				DA596B722AB3C364006D485C /* ArrowAnimation.swift in Sources */,
 				DA4AB0782AB35B350025508F /* BackgroundMusic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

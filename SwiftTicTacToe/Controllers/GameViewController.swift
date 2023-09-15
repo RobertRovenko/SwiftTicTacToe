@@ -11,6 +11,8 @@ class GameViewController: UIViewController {
 
     var ticTacToeGame = TicTacToeGame()
    
+    
+    
 
     @IBOutlet weak var lblUserTurn: UILabel!
     
@@ -39,8 +41,8 @@ class GameViewController: UIViewController {
         lblPlayer2Name.text = player2Name ?? "Player 2"
         lblUserTurn.text = player1Name
         
-        lblPlayerOneCounter.text = "\(player1Counter)"
-        lblPlayer2Counter.text = "\(player2Counter)"
+        lblPlayerOneCounter.text = "Score: \(player1Counter)"
+        lblPlayer2Counter.text = "Score: \(player2Counter)"
        
     }
     
@@ -118,9 +120,15 @@ class GameViewController: UIViewController {
            if segue.identifier == "GameOver" {
                if let gameOverVC = segue.destination as? GameOverViewController {
                    gameOverVC.winnerName = self.winnerName // Pass the winner's name
+                   gameOverVC.player1Name = self.player1Name // Pass player 1's name
+                    gameOverVC.player2Name = self.player2Name // Pass player 2's name
+                    gameOverVC.player1Counter = self.player1Counter // Pass player 1's score
+                    gameOverVC.player2Counter = self.player2Counter // Pass player 2's score
                }
            }
        }
+    
+    
   
 }
 
