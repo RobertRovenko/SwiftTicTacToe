@@ -13,7 +13,10 @@ class TicTacToeGame {
         case X = "X"
        
     }
+    
 
+    //private var winningCombination: [Int]? // Add this property
+    private(set) var winningIndices: [Int]?
     private var board: [Player?]
     private(set) var currentPlayer: Player
 
@@ -53,6 +56,7 @@ class TicTacToeGame {
             [0, 3, 6], [1, 4, 7], [2, 5, 8], //columns
             [0, 4, 8], [2, 4, 6]             //diagonals
         ]
+        
 
         for pattern in winPatterns {
             let a = pattern[0]
@@ -60,6 +64,7 @@ class TicTacToeGame {
             let c = pattern[2]
 
             if let playerA = board[a], let playerB = board[b], let playerC = board[c], playerA == playerB, playerB == playerC {
+                winningIndices = pattern
                 return playerA
             }
         }

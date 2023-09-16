@@ -11,9 +11,7 @@ class GameViewController: UIViewController {
 
     var ticTacToeGame = TicTacToeGame()
    
-    
-    
-
+    var isPlayerTurn = true
     @IBOutlet weak var lblUserTurn: UILabel!
     
     @IBOutlet weak var lblPlayer2Counter: UILabel!
@@ -30,6 +28,8 @@ class GameViewController: UIViewController {
     var winnerName: String?
     var player1Counter = 0
     var player2Counter = 0
+    
+    var winningIndices: [Int]?
     
     var NPCisActivated = false
 
@@ -54,10 +54,19 @@ class GameViewController: UIViewController {
         handleMove(button: sender)
     }
     
-    
+    func setButtonUserInteraction(enabled: Bool) {
+        for button in boardButtons {
+            button.isUserInteractionEnabled = enabled
+        }
+    }
+
+
     // Inside GameViewController
     func handleMove(button: UIButton) {
         let index = button.tag
+
+        // Disable user interaction for buttons during NPC's move
+        setButtonUserInteraction(enabled: false)
 
         // Making a move for the current player
         if ticTacToeGame.makeMove(at: index) {
@@ -75,7 +84,7 @@ class GameViewController: UIViewController {
             // Check if NPCisActivated and it's the NPC player's turn
             if NPCisActivated && ticTacToeGame.getCurrentPlayer() == .X {
                 // Introduce a delay of 2 seconds before the NPC player's move
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     // Create an instance of NPCPlayer
                     let npcPlayer = NPCPlayer()
 
@@ -85,30 +94,44 @@ class GameViewController: UIViewController {
                         let npcButton = self.boardButtons[npcMove]
                         self.handleMove(button: npcButton)
                     }
+
+                    // Enable user interaction for buttons after NPC's move
+                    self.setButtonUserInteraction(enabled: true)
                 }
+            } else {
+                // Enable user interaction for buttons after the player's move
+                setButtonUserInteraction(enabled: true)
             }
         }
     }
 
 
+
     
     func handleWin(winner: TicTacToeGame.Player) {
-      
         if winner == .O {
-            //winnerSymbol = player1Name ?? "X"
             player1Counter += 1
             winnerName = player1Name
         } else {
-            //winnerSymbol = player2Name ?? "O"
             player2Counter += 1
             winnerName = player2Name
         }
 
-    
-        self.resetGame()
-        performSegue(withIdentifier: "GameOver", sender: self)
-        
+        // Check if there are winning indices
+        if let winningIndices = ticTacToeGame.winningIndices {
+            highlightWinningMove(winningIndices: winningIndices)
+        }
+
+        // Delay before navigating to the game over screen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.resetGame()
+            self.performSegue(withIdentifier: "GameOver", sender: self)
+        }
     }
+
+
+
+
 
 
         func handleDraw() {
@@ -120,6 +143,21 @@ class GameViewController: UIViewController {
             
             performSegue(withIdentifier: "GameOver", sender: nil)
         }
+    
+    func highlightWinningMove(winningIndices: [Int]) {
+        for index in winningIndices {
+            let winningButton = boardButtons[index]
+            UIView.animate(withDuration: 0.5, animations: {
+                winningButton.backgroundColor = UIColor.red
+            }) { (_) in
+                UIView.animate(withDuration: 0.5, delay: 2.0, animations: {
+                    winningButton.backgroundColor = UIColor.white // Restore the original color
+                })
+            }
+        }
+    }
+
+
 
     func resetGame() {
         //Clear the game board in instance and clear button titles
@@ -131,6 +169,7 @@ class GameViewController: UIViewController {
             button.setTitle(nil, for: .normal)
             button.layer.borderColor = UIColor.clear.cgColor
             button.layer.borderWidth = 0.0
+           
         }
     }
     
