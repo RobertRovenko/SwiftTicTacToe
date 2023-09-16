@@ -21,7 +21,7 @@ class NameEnterViewController: UIViewController {
     var player1Name: String?
     var player2Name: String?
     
-    
+    var NPCisActivated = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +56,7 @@ class NameEnterViewController: UIViewController {
            } else {
                player1Name = txtFieldPlayer1.text
                player2Name = "NPC"
+               NPCisActivated = true
                txtFieldPlayer1.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer1.layer.borderWidth = 0.0
                txtFieldPlayer1.layer.cornerRadius = 0.0
@@ -98,6 +99,7 @@ class NameEnterViewController: UIViewController {
             if let gameViewController = segue.destination as? GameViewController {
                 gameViewController.player1Name = player1Name
                 gameViewController.player2Name = player2Name
+                gameViewController.NPCisActivated = NPCisActivated
             }
         }
     }

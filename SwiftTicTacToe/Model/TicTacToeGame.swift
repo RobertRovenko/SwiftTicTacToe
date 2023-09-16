@@ -26,6 +26,18 @@ class TicTacToeGame {
         return currentPlayer
     }
     
+    func getAvailableMoves() -> [Int] {
+        var availableMoves: [Int] = []
+        
+        for (index, player) in board.enumerated() {
+            if player == nil {
+                availableMoves.append(index)
+            }
+        }
+        
+        return availableMoves
+    }
+    
     func makeMove(at index: Int) -> Bool {
             if index < 0 || index >= board.count || board[index] != nil {
                 return false //No more moves

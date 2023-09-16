@@ -31,10 +31,12 @@ class GameViewController: UIViewController {
     var player1Counter = 0
     var player2Counter = 0
     
-    
+    var NPCisActivated = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(NPCisActivated)
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         lblPlayerOneName.text = player1Name ?? "Player 1"
@@ -53,25 +55,41 @@ class GameViewController: UIViewController {
     }
     
     
+    // Inside GameViewController
     func handleMove(button: UIButton) {
         let index = button.tag
 
-        //Making a move
+        // Making a move for the current player
         if ticTacToeGame.makeMove(at: index) {
-   
             button.setTitle(ticTacToeGame.getCurrentPlayer().rawValue, for: .normal)
 
-          
             lblUserTurn.text = (ticTacToeGame.getCurrentPlayer() == .X) ? player2Name : player1Name
 
-            //Check for win
+            // Check for win
             if let winner = ticTacToeGame.checkForWin() {
                 handleWin(winner: winner)
             } else if ticTacToeGame.isBoardFull() {
                 handleDraw()
             }
+
+            // Check if NPCisActivated and it's the NPC player's turn
+            if NPCisActivated && ticTacToeGame.getCurrentPlayer() == .X {
+                // Introduce a delay of 2 seconds before the NPC player's move
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    // Create an instance of NPCPlayer
+                    let npcPlayer = NPCPlayer()
+
+                    // Make a move for the NPC player
+                    if let npcMove = npcPlayer.makeMove(game: self.ticTacToeGame) {
+                        // Simulate the NPC player's move on the UI
+                        let npcButton = self.boardButtons[npcMove]
+                        self.handleMove(button: npcButton)
+                    }
+                }
+            }
         }
     }
+
 
     
     func handleWin(winner: TicTacToeGame.Player) {

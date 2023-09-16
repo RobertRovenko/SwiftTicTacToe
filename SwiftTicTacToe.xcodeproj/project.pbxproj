@@ -28,6 +28,7 @@
 		DA596B722AB3C364006D485C /* ArrowAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596B712AB3C364006D485C /* ArrowAnimation.swift */; };
 		DA886C6D2AB1AD020012CEE5 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA886C6C2AB1AD020012CEE5 /* TicTacToeGame.swift */; };
 		DAA0BCFB2AB2F02600E700EF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0BCFA2AB2F02600E700EF /* GameOverViewController.swift */; };
+		DAA3198A2AB6023A0032A580 /* NPCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA319892AB6023A0032A580 /* NPCPlayer.swift */; };
 		DAB862902AB07EED0057BC90 /* NameEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8628F2AB07EED0057BC90 /* NameEnterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		DA596B712AB3C364006D485C /* ArrowAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowAnimation.swift; sourceTree = "<group>"; };
 		DA886C6C2AB1AD020012CEE5 /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 		DAA0BCFA2AB2F02600E700EF /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		DAA319892AB6023A0032A580 /* NPCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPCPlayer.swift; sourceTree = "<group>"; };
 		DAB8628F2AB07EED0057BC90 /* NameEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 				DA4AB0772AB35B350025508F /* BackgroundMusic.swift */,
 				DA4AB0792AB3614C0025508F /* ImageViewAnimator.swift */,
 				DA596B712AB3C364006D485C /* ArrowAnimation.swift */,
+				DAA319892AB6023A0032A580 /* NPCPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				DA0D2CB92AAE4273005F1DD6 /* PlayerSelectViewController.swift in Sources */,
 				DAA0BCFB2AB2F02600E700EF /* GameOverViewController.swift in Sources */,
 				DAB862902AB07EED0057BC90 /* NameEnterViewController.swift in Sources */,
+				DAA3198A2AB6023A0032A580 /* NPCPlayer.swift in Sources */,
 				DA0D2CB52AAE23E8005F1DD6 /* HomeViewController.swift in Sources */,
 				DA886C6D2AB1AD020012CEE5 /* TicTacToeGame.swift in Sources */,
 				DA4AB06A2AB353D30025508F /* SoundManager.swift in Sources */,
