@@ -17,10 +17,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var lblPlayer2Counter: UILabel!
     @IBOutlet weak var lblPlayerOneCounter: UILabel!
     @IBOutlet weak var lblPlayerOneName: UILabel!
-   
     @IBOutlet weak var lblPlayer2Name: UILabel!
     
-    //outlet collection
+    //Outlet collection with buttons
     @IBOutlet var boardButtons: [UIButton]!
     
     var player1Name: String?
@@ -29,7 +28,7 @@ class GameViewController: UIViewController {
     var player1Counter = 0
     var player2Counter = 0
     
-    var winningIndices: [Int]?
+    var winningSignal: [Int]?
     
     var NPCisActivated = false
 
@@ -60,54 +59,56 @@ class GameViewController: UIViewController {
         }
     }
 
-
-    // Inside GameViewController
     func handleMove(button: UIButton) {
         let index = button.tag
 
-        // Disable user interaction for buttons during NPC's move
+        //check if the button is occupied
+        if ticTacToeGame.board[index] != nil {
+            // The button is already occupied, do nothing and return
+            return
+        }
+
+        //Disable user interaction during NPC move
         setButtonUserInteraction(enabled: false)
 
-        // Making a move for the current player
+        //Making a move for the current player
         if ticTacToeGame.makeMove(at: index) {
             button.setTitle(ticTacToeGame.getCurrentPlayer().rawValue, for: .normal)
 
             lblUserTurn.text = (ticTacToeGame.getCurrentPlayer() == .X) ? player2Name : player1Name
 
-            // Check for win
+            //Checking for a win
             if let winner = ticTacToeGame.checkForWin() {
                 handleWin(winner: winner)
             } else if ticTacToeGame.isBoardFull() {
                 handleDraw()
             }
 
-            // Check if NPCisActivated and it's the NPC player's turn
+            //Checking if NPCisActivated and if its the NPC turn
             if NPCisActivated && ticTacToeGame.getCurrentPlayer() == .X {
                 // Introduce a delay of 2 seconds before the NPC player's move
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                     // Create an instance of NPCPlayer
                     let npcPlayer = NPCPlayer()
 
-                    // Make a move for the NPC player
+                    //Make a move for the NPC
                     if let npcMove = npcPlayer.makeMove(game: self.ticTacToeGame) {
-                        // Simulate the NPC player's move on the UI
+                        //Placing the NPC symbol on the UI
                         let npcButton = self.boardButtons[npcMove]
                         self.handleMove(button: npcButton)
                     }
 
-                    // Enable user interaction for buttons after NPC's move
+                    //Enable user interaction after NPC moves
                     self.setButtonUserInteraction(enabled: true)
                 }
             } else {
-                // Enable user interaction for buttons after the player's move
+                //Enable user interaction after player incorrect or occupied move
                 setButtonUserInteraction(enabled: true)
             }
         }
     }
 
-
-
-    
+    //Handling if there is a win
     func handleWin(winner: TicTacToeGame.Player) {
         if winner == .O {
             player1Counter += 1
@@ -117,54 +118,54 @@ class GameViewController: UIViewController {
             winnerName = player2Name
         }
 
-        // Check if there are winning indices
-        if let winningIndices = ticTacToeGame.winningIndices {
-            highlightWinningMove(winningIndices: winningIndices)
+        //Check if there are winning conditions for the highlight
+        if let winningSignal = ticTacToeGame.winningSignal {
+            highlightWinningMove(winningSignal: winningSignal)
         }
 
-        // Delay before navigating to the game over screen
+        //Delay navigating to the game over screen to display the win highlight
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.resetGame()
             self.performSegue(withIdentifier: "GameOver", sender: self)
         }
     }
 
-
-
-
-
-
-        func handleDraw() {
+    //incase of a draw
+    func handleDraw() {
           
-            //Setting the winnername to nil so it displays a draw
-            winnerName = nil
-           
-            self.resetGame()
+        //Setting the winnername to nil so it displays a draw
+        winnerName = nil
+        self.resetGame()
             
-            performSegue(withIdentifier: "GameOver", sender: nil)
-        }
+        performSegue(withIdentifier: "GameOver", sender: nil)
+    }
     
-    func highlightWinningMove(winningIndices: [Int]) {
-        for index in winningIndices {
+    //Highlight func that marks the buttons with red to showcase a win
+    func highlightWinningMove(winningSignal: [Int]) {
+        for index in winningSignal {
             let winningButton = boardButtons[index]
             UIView.animate(withDuration: 0.5, animations: {
                 winningButton.backgroundColor = UIColor.red
             }) { (_) in
                 UIView.animate(withDuration: 0.5, delay: 2.0, animations: {
-                    winningButton.backgroundColor = UIColor.white // Restore the original color
+                    //Reset the color
+                    winningButton.backgroundColor = UIColor.white
                 })
             }
         }
     }
 
 
-
+    //func to reset the board and add the scores
     func resetGame() {
+        
         //Clear the game board in instance and clear button titles
         ticTacToeGame = TicTacToeGame()
+        
         lblUserTurn.text = player1Name
         lblPlayerOneCounter.text = "\(player1Counter)"
         lblPlayer2Counter.text = "\(player2Counter)"
+        
         for button in boardButtons {
             button.setTitle(nil, for: .normal)
             button.layer.borderColor = UIColor.clear.cgColor
@@ -173,14 +174,18 @@ class GameViewController: UIViewController {
         }
     }
     
+    //Sending data with names and scores to GO Screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "GameOver" {
+               
                if let gameOverVC = segue.destination as? GameOverViewController {
-                   gameOverVC.winnerName = self.winnerName // Pass the winner's name
-                   gameOverVC.player1Name = self.player1Name // Pass player 1's name
-                    gameOverVC.player2Name = self.player2Name // Pass player 2's name
-                    gameOverVC.player1Counter = self.player1Counter // Pass player 1's score
-                    gameOverVC.player2Counter = self.player2Counter // Pass player 2's score
+                   
+                   gameOverVC.winnerName = self.winnerName
+                   gameOverVC.player1Name = self.player1Name
+                    gameOverVC.player2Name = self.player2Name
+                    gameOverVC.player1Counter = self.player1Counter
+                    gameOverVC.player2Counter = self.player2Counter
+                   
                }
            }
        }

@@ -9,19 +9,21 @@ import Foundation
 
 class NPCPlayer {
     func makeMove(game: TicTacToeGame) -> Int? {
-        // Check if the game is still ongoing
+        
+        //Checking if the game is still going on
         guard !game.isBoardFull() && game.checkForWin() == nil else {
             return nil
         }
 
-        // Find available moves (empty squares)
+        //Find empty buttos
         let availableMoves = game.getAvailableMoves()
 
-        // Randomly choose a move from available moves
+        //Randomly choose a move from available buttons
         if let randomIndex = availableMoves.randomElement() {
             return randomIndex
         }
 
-        return nil // No available moves
+        //No available moves
+        return nil
     }
 }

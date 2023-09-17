@@ -14,12 +14,12 @@ class TicTacToeGame {
        
     }
     
-
-    //private var winningCombination: [Int]? // Add this property
-    private(set) var winningIndices: [Int]?
-    private var board: [Player?]
+    //Set can be read but not manipulated
+    private(set) var winningSignal: [Int]?
+    private (set)var board: [Player?]
     private(set) var currentPlayer: Player
 
+    
     init() {
         board = [nil, nil, nil, nil, nil, nil, nil, nil, nil]
         currentPlayer = .O
@@ -43,13 +43,15 @@ class TicTacToeGame {
     
     func makeMove(at index: Int) -> Bool {
             if index < 0 || index >= board.count || board[index] != nil {
-                return false //No more moves
+                //No more moves
+                return false
             }
 
         board[index] = currentPlayer
             currentPlayer = (currentPlayer == .X) ? .O : .X
             return true
         }
+    
     func checkForWin() -> Player? {
         let winPatterns: [[Int]] = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8], //rows
@@ -64,12 +66,15 @@ class TicTacToeGame {
             let c = pattern[2]
 
             if let playerA = board[a], let playerB = board[b], let playerC = board[c], playerA == playerB, playerB == playerC {
-                winningIndices = pattern
+                
+                //For the highlight
+                winningSignal = pattern
                 return playerA
             }
         }
 
-        return nil //No win yet
+        //No win yet
+        return nil
     }
 
 

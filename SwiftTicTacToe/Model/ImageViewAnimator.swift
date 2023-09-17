@@ -21,21 +21,21 @@ class ImageViewAnimator {
 
     func startAnimating() {
         UIView.animate(withDuration: animationDuration, animations: {
-            // Move the image view up
+            //Move the image view up
             self.imageView.transform = CGAffineTransform(translationX: 0, y: -self.moveDistance)
         }) { _ in
             UIView.animate(withDuration: self.animationDuration, animations: {
-                // Move the image view back to its original position
+                //Move the image view back to its original position
                 self.imageView.transform = .identity
             }) { _ in
-                // Recursive call to continue the animation
+                //Make it loop
                 self.startAnimating()
             }
         }
     }
 
     func stopAnimating() {
-        // Stop the animation if needed
+        //Stop the animation
         imageView.layer.removeAllAnimations()
     }
 }

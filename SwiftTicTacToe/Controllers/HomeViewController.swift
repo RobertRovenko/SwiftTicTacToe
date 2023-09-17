@@ -83,10 +83,12 @@ class HomeViewController: UIViewController {
 
            //QuitButton
            let quitAction = UIAlertAction(title: "Quit", style: .destructive) { _ in
-               //quit the app
-               BackgroundMusic.shared.stopBackgroundAudio()
-               UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
+            //quit the app
+            BackgroundMusic.shared.stopBackgroundAudio()
+            UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
+               
            }
+        
            alert.addAction(quitAction)
 
            //present = show the alert

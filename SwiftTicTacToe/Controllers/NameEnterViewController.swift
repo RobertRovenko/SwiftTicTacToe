@@ -25,34 +25,30 @@ class NameEnterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-       
         
         //if there is one or two players ui change
-        
         if shouldHidePlayer1 {
             btnConfirmName.isHidden = true
+            
         }
         
         if shouldHidePlayer2 {
-               btn2ConfirmName.isHidden = true
+            btn2ConfirmName.isHidden = true
             txtFieldPlayer2.isHidden = true
             lblPlayer2.isHidden = true
+            
            }
-       
     }
 
     @IBAction func btnConfirmName(_ sender: UIButton) {
         
         if txtFieldPlayer1.text?.isEmpty ?? true {
               
-            
             //if a textfield is empty
+            txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
+            txtFieldPlayer1.layer.borderWidth = 1.0
+            txtFieldPlayer1.layer.cornerRadius = 0.0
             
-               txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
-               txtFieldPlayer1.layer.borderWidth = 1.0
-               txtFieldPlayer1.layer.cornerRadius = 0.0
            } else {
                player1Name = txtFieldPlayer1.text
                player2Name = "NPC"
@@ -73,12 +69,11 @@ class NameEnterViewController: UIViewController {
         
         if txtFieldPlayer2.text?.isEmpty == true || txtFieldPlayer1.text?.isEmpty == true{
               
+            txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
+            txtFieldPlayer1.layer.borderWidth = 2.0
+            txtFieldPlayer2.layer.borderColor = UIColor.red.cgColor
+            txtFieldPlayer2.layer.borderWidth = 2.0
             
-            
-                txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
-                txtFieldPlayer1.layer.borderWidth = 2.0
-               txtFieldPlayer2.layer.borderColor = UIColor.red.cgColor
-               txtFieldPlayer2.layer.borderWidth = 2.0
            } else {
               
                player1Name = txtFieldPlayer1.text
