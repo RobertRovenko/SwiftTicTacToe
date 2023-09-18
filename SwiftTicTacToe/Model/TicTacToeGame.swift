@@ -42,14 +42,15 @@ class TicTacToeGame {
     }
     
     func makeMove(at index: Int) -> Bool {
-            if index < 0 || index >= board.count || board[index] != nil {
-                //No more moves
-                return false
-            }
+        if index < 0 || index >= board.count || board[index] != nil {
+            //No more moves
+            return false
+        }
 
         board[index] = currentPlayer
-            currentPlayer = (currentPlayer == .X) ? .O : .X
-            return true
+        currentPlayer = (currentPlayer == .X) ? .O : .X
+        return true
+        
         }
     
     func checkForWin() -> Player? {

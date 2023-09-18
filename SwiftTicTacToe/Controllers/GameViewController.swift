@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
    
     var isPlayerTurn = true
     @IBOutlet weak var lblUserTurn: UILabel!
-    
+
     @IBOutlet weak var lblPlayer2Counter: UILabel!
     @IBOutlet weak var lblPlayerOneCounter: UILabel!
     @IBOutlet weak var lblPlayerOneName: UILabel!
@@ -30,6 +30,7 @@ class GameViewController: UIViewController {
     
     var winningSignal: [Int]?
     
+    var isGameOver = false
     var NPCisActivated = false
 
     override func viewDidLoad() {
@@ -62,11 +63,17 @@ class GameViewController: UIViewController {
     func handleMove(button: UIButton) {
         let index = button.tag
 
+        
         //check if the button is occupied
         if ticTacToeGame.board[index] != nil {
             // The button is already occupied, do nothing and return
             return
         }
+        
+        if isGameOver || ticTacToeGame.board[index] != nil {
+               // The game is over or the button is already occupied, do nothing and return
+               return
+           }
 
         //Disable user interaction during NPC move
         setButtonUserInteraction(enabled: false)
@@ -110,6 +117,8 @@ class GameViewController: UIViewController {
 
     //Handling if there is a win
     func handleWin(winner: TicTacToeGame.Player) {
+        
+        
         if winner == .O {
             player1Counter += 1
             winnerName = player1Name
@@ -142,6 +151,7 @@ class GameViewController: UIViewController {
     
     //Highlight func that marks the buttons with red to showcase a win
     func highlightWinningMove(winningSignal: [Int]) {
+        isGameOver = true
         for index in winningSignal {
             let winningButton = boardButtons[index]
             UIView.animate(withDuration: 0.5, animations: {
@@ -150,8 +160,10 @@ class GameViewController: UIViewController {
                 UIView.animate(withDuration: 0.5, delay: 2.0, animations: {
                     //Reset the color
                     winningButton.backgroundColor = UIColor.white
+                    
                 })
             }
+           
         }
     }
 
@@ -161,7 +173,7 @@ class GameViewController: UIViewController {
         
         //Clear the game board in instance and clear button titles
         ticTacToeGame = TicTacToeGame()
-        
+        isGameOver = false
         lblUserTurn.text = player1Name
         lblPlayerOneCounter.text = "\(player1Counter)"
         lblPlayer2Counter.text = "\(player2Counter)"

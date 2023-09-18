@@ -21,15 +21,15 @@
 		DA4AB06A2AB353D30025508F /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB0692AB353D30025508F /* SoundManager.swift */; };
 		DA4AB0782AB35B350025508F /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB0772AB35B350025508F /* BackgroundMusic.swift */; };
 		DA4AB07A2AB3614C0025508F /* ImageViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB0792AB3614C0025508F /* ImageViewAnimator.swift */; };
-		DA596B692AB3B324006D485C /* clickbutton.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA596B682AB3B324006D485C /* clickbutton.mp3 */; };
-		DA596B6B2AB3B334006D485C /* menusound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA596B6A2AB3B334006D485C /* menusound.mp3 */; };
-		DA596B6D2AB3B375006D485C /* winsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA596B6C2AB3B375006D485C /* winsound.mp3 */; };
-		DA596B6F2AB3B857006D485C /* backgroundmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA596B6E2AB3B857006D485C /* backgroundmusic.mp3 */; };
 		DA596B722AB3C364006D485C /* ArrowAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA596B712AB3C364006D485C /* ArrowAnimation.swift */; };
 		DA886C6D2AB1AD020012CEE5 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA886C6C2AB1AD020012CEE5 /* TicTacToeGame.swift */; };
 		DAA0BCFB2AB2F02600E700EF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0BCFA2AB2F02600E700EF /* GameOverViewController.swift */; };
 		DAA3198A2AB6023A0032A580 /* NPCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA319892AB6023A0032A580 /* NPCPlayer.swift */; };
 		DAB862902AB07EED0057BC90 /* NameEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8628F2AB07EED0057BC90 /* NameEnterViewController.swift */; };
+		DAEEAD792AB83DB90061CF80 /* menusound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAEEAD782AB83DB90061CF80 /* menusound.mp3 */; };
+		DAEEAD7B2AB83DC10061CF80 /* clickbutton.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAEEAD7A2AB83DC10061CF80 /* clickbutton.mp3 */; };
+		DAEEAD7D2AB83DC90061CF80 /* winsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAEEAD7C2AB83DC90061CF80 /* winsound.mp3 */; };
+		DAEEAD7F2AB83DD00061CF80 /* backgroundmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAEEAD7E2AB83DD00061CF80 /* backgroundmusic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,15 +68,15 @@
 		DA4AB0692AB353D30025508F /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		DA4AB0772AB35B350025508F /* BackgroundMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusic.swift; sourceTree = "<group>"; };
 		DA4AB0792AB3614C0025508F /* ImageViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewAnimator.swift; sourceTree = "<group>"; };
-		DA596B682AB3B324006D485C /* clickbutton.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clickbutton.mp3; path = ../../../.Trash/clickbutton.mp3; sourceTree = "<group>"; };
-		DA596B6A2AB3B334006D485C /* menusound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menusound.mp3; path = ../../../.Trash/menusound.mp3; sourceTree = "<group>"; };
-		DA596B6C2AB3B375006D485C /* winsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = winsound.mp3; path = ../../../.Trash/winsound.mp3; sourceTree = "<group>"; };
-		DA596B6E2AB3B857006D485C /* backgroundmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundmusic.mp3; path = ../../../.Trash/backgroundmusic.mp3; sourceTree = "<group>"; };
 		DA596B712AB3C364006D485C /* ArrowAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowAnimation.swift; sourceTree = "<group>"; };
 		DA886C6C2AB1AD020012CEE5 /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 		DAA0BCFA2AB2F02600E700EF /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		DAA319892AB6023A0032A580 /* NPCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPCPlayer.swift; sourceTree = "<group>"; };
 		DAB8628F2AB07EED0057BC90 /* NameEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEnterViewController.swift; sourceTree = "<group>"; };
+		DAEEAD782AB83DB90061CF80 /* menusound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menusound.mp3; path = ../../../Downloads/menusound.mp3; sourceTree = "<group>"; };
+		DAEEAD7A2AB83DC10061CF80 /* clickbutton.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clickbutton.mp3; path = ../../../Downloads/clickbutton.mp3; sourceTree = "<group>"; };
+		DAEEAD7C2AB83DC90061CF80 /* winsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = winsound.mp3; path = ../../../Downloads/winsound.mp3; sourceTree = "<group>"; };
+		DAEEAD7E2AB83DD00061CF80 /* backgroundmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundmusic.mp3; path = ../../../Downloads/backgroundmusic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 				DA0325502AADCA30000D3152 /* SceneDelegate.swift */,
 				DA0325542AADCA30000D3152 /* Main.storyboard */,
 				DA0325572AADCA31000D3152 /* Assets.xcassets */,
-				DA596B6E2AB3B857006D485C /* backgroundmusic.mp3 */,
+				DAEEAD7E2AB83DD00061CF80 /* backgroundmusic.mp3 */,
 				DA0325592AADCA31000D3152 /* LaunchScreen.storyboard */,
 				DA03255C2AADCA31000D3152 /* Info.plist */,
 			);
@@ -186,9 +186,9 @@
 		DA596B662AB3B2F5006D485C /* SoundEffects */ = {
 			isa = PBXGroup;
 			children = (
-				DA596B6A2AB3B334006D485C /* menusound.mp3 */,
-				DA596B682AB3B324006D485C /* clickbutton.mp3 */,
-				DA596B6C2AB3B375006D485C /* winsound.mp3 */,
+				DAEEAD7C2AB83DC90061CF80 /* winsound.mp3 */,
+				DAEEAD7A2AB83DC10061CF80 /* clickbutton.mp3 */,
+				DAEEAD782AB83DB90061CF80 /* menusound.mp3 */,
 			);
 			name = SoundEffects;
 			sourceTree = "<group>";
@@ -298,12 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA03255B2AADCA31000D3152 /* LaunchScreen.storyboard in Resources */,
+				DAEEAD7D2AB83DC90061CF80 /* winsound.mp3 in Resources */,
+				DAEEAD7B2AB83DC10061CF80 /* clickbutton.mp3 in Resources */,
+				DAEEAD792AB83DB90061CF80 /* menusound.mp3 in Resources */,
 				DA0325582AADCA31000D3152 /* Assets.xcassets in Resources */,
-				DA596B692AB3B324006D485C /* clickbutton.mp3 in Resources */,
+				DAEEAD7F2AB83DD00061CF80 /* backgroundmusic.mp3 in Resources */,
 				DA0325562AADCA30000D3152 /* Main.storyboard in Resources */,
-				DA596B6D2AB3B375006D485C /* winsound.mp3 in Resources */,
-				DA596B6F2AB3B857006D485C /* backgroundmusic.mp3 in Resources */,
-				DA596B6B2AB3B334006D485C /* menusound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
