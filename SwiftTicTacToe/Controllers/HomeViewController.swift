@@ -10,11 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var BtnPlay: UIButton!
-    
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var btnQuit: UIButton!
-    
-    
     @IBOutlet var lblArrow: [UILabel]!
     
     var labelAnimator: ArrowAnimation?
@@ -56,6 +53,9 @@ class HomeViewController: UIViewController {
       deinit {
           NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
       }
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         
         labelAnimator?.startAnimating()

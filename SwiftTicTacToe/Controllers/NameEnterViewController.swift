@@ -42,49 +42,41 @@ class NameEnterViewController: UIViewController {
 
     @IBAction func btnConfirmName(_ sender: UIButton) {
         
-        if txtFieldPlayer1.text?.isEmpty ?? true {
-              
-            //if a textfield is empty
-            txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
-            txtFieldPlayer1.layer.borderWidth = 1.0
-            txtFieldPlayer1.layer.cornerRadius = 0.0
-            
-           } else {
-               player1Name = txtFieldPlayer1.text
+        if let playerName = txtFieldPlayer1.text, !playerName.isEmpty {
+               //Names longer than 9 cuts off
+               player1Name = String(playerName.prefix(9))
                player2Name = "NPC"
                NPCisActivated = true
                txtFieldPlayer1.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer1.layer.borderWidth = 0.0
                txtFieldPlayer1.layer.cornerRadius = 0.0
-
                SoundManager.shared.playSound(named: "menusound")
                performSegue(withIdentifier: "GameSegue", sender: self)
+           } else {
+               txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
+               txtFieldPlayer1.layer.borderWidth = 1.0
+               txtFieldPlayer1.layer.cornerRadius = 0.0
            }
-        
     }
     
     @IBAction func btn2ConfirmName(_ sender: UIButton) {
-        
         //if a textfield is empty
-        
-        if txtFieldPlayer2.text?.isEmpty == true || txtFieldPlayer1.text?.isEmpty == true{
-              
-            txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
-            txtFieldPlayer1.layer.borderWidth = 2.0
-            txtFieldPlayer2.layer.borderColor = UIColor.red.cgColor
-            txtFieldPlayer2.layer.borderWidth = 2.0
-            
-           } else {
-              
-               player1Name = txtFieldPlayer1.text
-               player2Name = txtFieldPlayer2.text
+        if let player1 = txtFieldPlayer1.text, let player2 = txtFieldPlayer2.text,
+               !player1.isEmpty, !player2.isEmpty {
+               //Names longer than 9 Chars will be cut
+               player1Name = String(player1.prefix(9))
+               player2Name = String(player2.prefix(9))
                txtFieldPlayer2.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer2.layer.borderWidth = 1.0
                txtFieldPlayer1.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer1.layer.borderWidth = 1.0
-
                SoundManager.shared.playSound(named: "menusound")
                performSegue(withIdentifier: "GameSegue", sender: self)
+           } else {
+               txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
+               txtFieldPlayer1.layer.borderWidth = 2.0
+               txtFieldPlayer2.layer.borderColor = UIColor.red.cgColor
+               txtFieldPlayer2.layer.borderWidth = 2.0
            }
     }
     

@@ -11,14 +11,11 @@ class GameViewController: UIViewController {
 
     var ticTacToeGame = TicTacToeGame()
    
-    var isPlayerTurn = true
     @IBOutlet weak var lblUserTurn: UILabel!
-
     @IBOutlet weak var lblPlayer2Counter: UILabel!
     @IBOutlet weak var lblPlayerOneCounter: UILabel!
     @IBOutlet weak var lblPlayerOneName: UILabel!
     @IBOutlet weak var lblPlayer2Name: UILabel!
-    
     //Outlet collection with buttons
     @IBOutlet var boardButtons: [UIButton]!
     
@@ -30,6 +27,7 @@ class GameViewController: UIViewController {
     
     var winningSignal: [Int]?
     
+    var isPlayerTurn = true
     var isGameOver = false
     var NPCisActivated = false
 
@@ -154,16 +152,18 @@ class GameViewController: UIViewController {
         isGameOver = true
         for index in winningSignal {
             let winningButton = boardButtons[index]
+            
             UIView.animate(withDuration: 0.5, animations: {
-                winningButton.backgroundColor = UIColor.red
+                
+                winningButton.backgroundColor = UIColor.systemOrange
+                
             }) { (_) in
-                UIView.animate(withDuration: 0.5, delay: 2.0, animations: {
+                UIView.animate(withDuration: 0.5, delay: 1.0, animations: {
                     //Reset the color
                     winningButton.backgroundColor = UIColor.white
                     
                 })
             }
-           
         }
     }
 
@@ -194,9 +194,9 @@ class GameViewController: UIViewController {
                    
                    gameOverVC.winnerName = self.winnerName
                    gameOverVC.player1Name = self.player1Name
-                    gameOverVC.player2Name = self.player2Name
-                    gameOverVC.player1Counter = self.player1Counter
-                    gameOverVC.player2Counter = self.player2Counter
+                   gameOverVC.player2Name = self.player2Name
+                   gameOverVC.player1Counter = self.player1Counter
+                   gameOverVC.player2Counter = self.player2Counter
                    
                }
            }
