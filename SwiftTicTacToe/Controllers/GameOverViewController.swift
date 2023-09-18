@@ -53,6 +53,21 @@ class GameOverViewController: UIViewController {
     
     @IBAction func btnMainMenu(_ sender: Any) {
         
+        
+        //Dismiss and then pop to the root ViewController
+        self.dismiss(animated: false) {
+                // Navigate back to the root view controller
+                if let sceneDelegate = UIApplication.shared.connectedScenes
+                    .first?.delegate as? SceneDelegate {
+                    if let window = sceneDelegate.window {
+                        if let rootViewController = window.rootViewController {
+                            if let navigationController = rootViewController as? UINavigationController {
+                                navigationController.popToRootViewController(animated: false)
+                            }
+                        }
+                    }
+                }
+            }
      
     }
     
