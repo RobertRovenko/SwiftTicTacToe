@@ -10,10 +10,12 @@ import UIKit
 class PlayerSelectViewController: UIViewController {
     
     @IBOutlet weak var btn1Player: UIButton!
-    
     @IBOutlet weak var btn2Player: UIButton!
-    
     @IBOutlet var playerSelectSymbol: [UILabel]!
+    
+    let ONE_PLAYER_SEGUE = "1PlayerSegue"
+    let TWO_PLAYER_SEGUE = "2PlayerSegue"
+    
     
     var labelAnimator: ArrowAnimation?
     
@@ -61,12 +63,12 @@ class PlayerSelectViewController: UIViewController {
        }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "1PlayerSegue" {
+        if segue.identifier == ONE_PLAYER_SEGUE {
             if let destinationVC = segue.destination as? NameEnterViewController {
                 destinationVC.shouldHidePlayer2 = true
             }
         }
-        if segue.identifier == "2PlayerSegue" {
+        if segue.identifier == TWO_PLAYER_SEGUE {
             if let destinationVC = segue.destination as? NameEnterViewController {
                 destinationVC.shouldHidePlayer1 = true
             }

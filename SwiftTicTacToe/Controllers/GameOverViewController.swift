@@ -9,7 +9,6 @@ import UIKit
 
 class GameOverViewController: UIViewController {
 
-  
     @IBOutlet weak var btnRematch: UIButton!
     @IBOutlet weak var lblWinnerName: UILabel!
     @IBOutlet weak var lblPlayerOneName: UILabel!
@@ -69,9 +68,6 @@ class GameOverViewController: UIViewController {
                 }
             }
      
+        
     }
-    
-    
-   
-    
 }

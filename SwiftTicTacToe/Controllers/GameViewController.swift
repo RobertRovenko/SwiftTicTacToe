@@ -10,6 +10,8 @@ import UIKit
 class GameViewController: UIViewController {
 
     var ticTacToeGame = TicTacToeGame()
+    
+    let GAME_OVER_SEGUE = "GameOver"
    
     @IBOutlet weak var lblUserTurn: UILabel!
     @IBOutlet weak var lblPlayer2Counter: UILabel!
@@ -133,7 +135,7 @@ class GameViewController: UIViewController {
         //Delay navigating to the game over screen to display the win highlight
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.resetGame()
-            self.performSegue(withIdentifier: "GameOver", sender: self)
+            self.performSegue(withIdentifier: self.GAME_OVER_SEGUE, sender: self)
         }
     }
 
@@ -144,7 +146,7 @@ class GameViewController: UIViewController {
         winnerName = nil
         self.resetGame()
             
-        performSegue(withIdentifier: "GameOver", sender: nil)
+        performSegue(withIdentifier: GAME_OVER_SEGUE, sender: nil)
     }
     
     //Highlight func that marks the buttons with red to showcase a win
@@ -188,7 +190,7 @@ class GameViewController: UIViewController {
     
     //Sending data with names and scores to GO Screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "GameOver" {
+           if segue.identifier == GAME_OVER_SEGUE {
                
                if let gameOverVC = segue.destination as? GameOverViewController {
                    

@@ -15,6 +15,8 @@ class NameEnterViewController: UIViewController {
     @IBOutlet weak var btn2ConfirmName: UIButton!
     @IBOutlet weak var btnConfirmName: UIButton!
     
+    let GAME_SEGUE = "GameSegue"
+    
     var shouldHidePlayer2 = false
     var shouldHidePlayer1 = false
     
@@ -51,7 +53,7 @@ class NameEnterViewController: UIViewController {
                txtFieldPlayer1.layer.borderWidth = 0.0
                txtFieldPlayer1.layer.cornerRadius = 0.0
                SoundManager.shared.playSound(named: "menusound")
-               performSegue(withIdentifier: "GameSegue", sender: self)
+               performSegue(withIdentifier: GAME_SEGUE, sender: self)
            } else {
                txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
                txtFieldPlayer1.layer.borderWidth = 1.0
@@ -71,7 +73,7 @@ class NameEnterViewController: UIViewController {
                txtFieldPlayer1.layer.borderColor = UIColor.black.cgColor
                txtFieldPlayer1.layer.borderWidth = 1.0
                SoundManager.shared.playSound(named: "menusound")
-               performSegue(withIdentifier: "GameSegue", sender: self)
+               performSegue(withIdentifier: GAME_SEGUE, sender: self)
            } else {
                txtFieldPlayer1.layer.borderColor = UIColor.red.cgColor
                txtFieldPlayer1.layer.borderWidth = 2.0
@@ -82,7 +84,7 @@ class NameEnterViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GameSegue" {
+        if segue.identifier == GAME_SEGUE {
             if let gameViewController = segue.destination as? GameViewController {
                 gameViewController.player1Name = player1Name
                 gameViewController.player2Name = player2Name

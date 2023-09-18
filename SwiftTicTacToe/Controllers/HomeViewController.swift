@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    let SELECT_PLAYERS_SEGUE = "PlayerSelectSegue"
+    
     @IBOutlet weak var BtnPlay: UIButton!
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var btnQuit: UIButton!
@@ -70,7 +72,7 @@ class HomeViewController: UIViewController {
         SoundManager.shared.playSound(named: "menusound")
         BackgroundMusic.shared.stopBackgroundAudio()
 
-        performSegue(withIdentifier: "PlayerSelectSegue", sender: self)
+        performSegue(withIdentifier: SELECT_PLAYERS_SEGUE, sender: self)
         
     }
     
