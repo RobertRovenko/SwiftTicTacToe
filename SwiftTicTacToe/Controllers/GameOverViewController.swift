@@ -17,30 +17,50 @@ class GameOverViewController: UIViewController {
     @IBOutlet weak var lblPlayer2Score: UILabel!
     @IBOutlet weak var btnMainMenu: UIButton!
     
+    var paused = false
     var winnerName: String?
     var player1Name: String?
     var player2Name: String?
     var player1Counter: Int = 0
     var player2Counter: Int = 0
     
+    let attributes: [NSAttributedString.Key: Any] = [
+        .font: UIFont(name: "MarkerFelt-Thin", size: 36.0) ?? UIFont.systemFont(ofSize: 36.0),
+        .foregroundColor: UIColor.black
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var attributedText = NSAttributedString(string: "REMATCH", attributes: attributes)
+        attributedText = NSAttributedString(string: "REMATCH", attributes: attributes)
+        btnRematch.setAttributedTitle(attributedText, for: .normal)
+        
         // Play "winsound"
         SoundManager.shared.playSound(named: "winsound")
-
+        
         //display the winnername
         if let winnerName = winnerName {
                   lblWinnerName.text = "\(winnerName) wins!"
               } else {
                   lblWinnerName.text = "It's a draw!"
               }
-    
+        
         lblPlayerOneName.text = "\(player1Name ?? "Player 1")"
         lblPlayerTwoName.text = "\(player2Name ?? "Player 2")"
         lblPlayerOneScore.text = "Score: \(player1Counter)"
         lblPlayer2Score.text = "Score: \(player2Counter)"
         
+        if paused == true{
+            
+            lblWinnerName.text = "Game Paused"
+            attributedText = NSAttributedString(string: "Continue", attributes: attributes)
+            // Set the new attributed string as the button's title
+            btnRematch.setAttributedTitle(attributedText, for: .normal)
+            paused = false
+
+        }
+       
     }
     
   
@@ -67,7 +87,5 @@ class GameOverViewController: UIViewController {
                     }
                 }
             }
-     
-        
     }
 }

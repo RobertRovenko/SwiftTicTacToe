@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     
     let GAME_OVER_SEGUE = "GameOver"
    
+    @IBOutlet weak var btnPause: UIButton!
     @IBOutlet weak var lblUserTurn: UILabel!
     @IBOutlet weak var lblPlayer2Counter: UILabel!
     @IBOutlet weak var lblPlayerOneCounter: UILabel!
@@ -29,6 +30,7 @@ class GameViewController: UIViewController {
     
     var winningSignal: [Int]?
     
+    var paused = false
     var isPlayerTurn = true
     var isGameOver = false
     var NPCisActivated = false
@@ -49,6 +51,15 @@ class GameViewController: UIViewController {
     }
     
    
+    @IBAction func btnPause(_ sender: Any) {
+        
+        //winnerName = "Game Paused"
+        paused = true
+        self.performSegue(withIdentifier: self.GAME_OVER_SEGUE, sender: nil)
+        
+    }
+    
+    
     @IBAction func boardButtonsTap(_ sender: UIButton) {
         SoundManager.shared.playSound(named: "clickbutton")
         handleMove(button: sender)
@@ -117,8 +128,7 @@ class GameViewController: UIViewController {
 
     //Handling if there is a win
     func handleWin(winner: TicTacToeGame.Player) {
-        
-        
+        paused = false
         if winner == .O {
             player1Counter += 1
             winnerName = player1Name
@@ -141,7 +151,7 @@ class GameViewController: UIViewController {
 
     //incase of a draw
     func handleDraw() {
-          
+        paused = false
         //Setting the winnername to nil so it displays a draw
         winnerName = nil
         self.resetGame()
@@ -199,6 +209,7 @@ class GameViewController: UIViewController {
                    gameOverVC.player2Name = self.player2Name
                    gameOverVC.player1Counter = self.player1Counter
                    gameOverVC.player2Counter = self.player2Counter
+                   gameOverVC.paused = self.paused
                    
                }
            }
