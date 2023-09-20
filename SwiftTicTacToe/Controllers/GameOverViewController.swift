@@ -36,11 +36,9 @@ class GameOverViewController: UIViewController {
         attributedText = NSAttributedString(string: "REMATCH", attributes: attributes)
         btnRematch.setAttributedTitle(attributedText, for: .normal)
         
-        // Play "winsound"
-        SoundManager.shared.playSound(named: "winsound")
-        
         //display the winnername
         if let winnerName = winnerName {
+           
                   lblWinnerName.text = "\(winnerName) wins!"
               } else {
                   lblWinnerName.text = "It's a draw!"
@@ -57,15 +55,19 @@ class GameOverViewController: UIViewController {
             attributedText = NSAttributedString(string: "Continue", attributes: attributes)
             // Set the new attributed string as the button's title
             btnRematch.setAttributedTitle(attributedText, for: .normal)
+            SoundManager.shared.playSound(named: "pausesound")
             paused = false
 
+        }else{
+            // Play "winsound"
+            SoundManager.shared.playSound(named: "winsound")
         }
        
     }
     
   
     @IBAction func btnRematch(_ sender: Any) {
-        SoundManager.shared.playSound(named: "menusound")
+        SoundManager.shared.playSound(named: "pausesound")
         
         self.dismiss(animated: true, completion: nil)
     }

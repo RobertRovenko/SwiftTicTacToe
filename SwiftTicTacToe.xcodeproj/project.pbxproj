@@ -18,6 +18,7 @@
 		DA0D2CB52AAE23E8005F1DD6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D2CB42AAE23E8005F1DD6 /* HomeViewController.swift */; };
 		DA0D2CB72AAE425F005F1DD6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D2CB62AAE425F005F1DD6 /* GameViewController.swift */; };
 		DA0D2CB92AAE4273005F1DD6 /* PlayerSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D2CB82AAE4273005F1DD6 /* PlayerSelectViewController.swift */; };
+		DA3C4C0C2ABB3A86007515F3 /* pausesound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA3C4C0B2ABB3A86007515F3 /* pausesound.mp3 */; };
 		DA4AB06A2AB353D30025508F /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB0692AB353D30025508F /* SoundManager.swift */; };
 		DA4AB0782AB35B350025508F /* BackgroundMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB0772AB35B350025508F /* BackgroundMusic.swift */; };
 		DA4AB07A2AB3614C0025508F /* ImageViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB0792AB3614C0025508F /* ImageViewAnimator.swift */; };
@@ -65,6 +66,7 @@
 		DA0D2CB42AAE23E8005F1DD6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DA0D2CB62AAE425F005F1DD6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DA0D2CB82AAE4273005F1DD6 /* PlayerSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectViewController.swift; sourceTree = "<group>"; };
+		DA3C4C0B2ABB3A86007515F3 /* pausesound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pausesound.mp3; path = ../../pausesound.mp3; sourceTree = "<group>"; };
 		DA4AB0692AB353D30025508F /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		DA4AB0772AB35B350025508F /* BackgroundMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMusic.swift; sourceTree = "<group>"; };
 		DA4AB0792AB3614C0025508F /* ImageViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewAnimator.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		DA596B662AB3B2F5006D485C /* SoundEffects */ = {
 			isa = PBXGroup;
 			children = (
+				DA3C4C0B2ABB3A86007515F3 /* pausesound.mp3 */,
 				DAEEAD7C2AB83DC90061CF80 /* winsound.mp3 */,
 				DAEEAD7A2AB83DC10061CF80 /* clickbutton.mp3 */,
 				DAEEAD782AB83DB90061CF80 /* menusound.mp3 */,
@@ -300,6 +303,7 @@
 				DA03255B2AADCA31000D3152 /* LaunchScreen.storyboard in Resources */,
 				DAEEAD7D2AB83DC90061CF80 /* winsound.mp3 in Resources */,
 				DAEEAD7B2AB83DC10061CF80 /* clickbutton.mp3 in Resources */,
+				DA3C4C0C2ABB3A86007515F3 /* pausesound.mp3 in Resources */,
 				DAEEAD792AB83DB90061CF80 /* menusound.mp3 in Resources */,
 				DA0325582AADCA31000D3152 /* Assets.xcassets in Resources */,
 				DAEEAD7F2AB83DD00061CF80 /* backgroundmusic.mp3 in Resources */,
