@@ -1,4 +1,7 @@
 # SwiftTicTacToe
+Welcome to my epic TicTacToe Game! Challenge your friends or play VS a WildCard NPC! 
+With cool graphics made with Canva, Epic Soundeffects and high tech animations!
+
 <img src="https://github.com/RobertRovenko/SwiftTicTacToe/assets/32544623/ce353e06-29a1-4999-8648-f7fd62841d05" width="200">
 <img src="https://github.com/RobertRovenko/SwiftTicTacToe/assets/32544623/dfb9b45d-b0af-4e5c-adc4-048a1de54939" width="200">
 <img src="https://github.com/RobertRovenko/SwiftTicTacToe/assets/32544623/d95846f9-f57d-48f0-b310-f9092836b821" width="200">
